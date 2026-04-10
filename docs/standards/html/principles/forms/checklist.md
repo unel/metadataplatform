@@ -1,0 +1,6 @@
+- [ ] Каждый input имеет явный label (не placeholder как замену)
+- [ ] Обязательные поля помечены через required и визуально
+- [ ] Тип input соответствует данным (email, tel, number, date)
+- [ ] Группы связанных полей обёрнуты в fieldset с legend
+- [ ] Ошибки валидации связаны с полем через aria-describedby
+- [ ] Кнопка submit имеет тип type="submit"

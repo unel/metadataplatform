@@ -1,0 +1,65 @@
+# Настройки флоу разработки
+# transition: confirm — показать результат, ждать подтверждения пользователя
+# transition: auto — выполнить и передать управление следующему шагу
+
+# Уровень владения технологиями команды
+# beginner    — простые идиомы, развёрнутые комментарии с объяснением почему
+# intermediate — стандартные идиомы, комментарии для неочевидного
+# advanced    — полностью идиоматичный код, минимум комментариев
+proficiency:
+  go: intermediate
+  typescript: advanced
+  sveltekit: intermediate
+  css: advanced
+  bun: beginner
+  postgres: intermediate
+  html: advanced
+
+steps:
+  # Функциональные требования — черновик всегда показываем, могут быть правки
+  spec-ft:
+    transition: confirm
+
+  # Нефункциональные требования — аналогично, требуют осмысленного ввода
+  spec-nft:
+    transition: confirm
+
+  # Ревью спеки — механическая проверка, результат идёт дальше автоматически
+  spec-review:
+    transition: auto
+
+  # Acceptance criteria — показываем, чтобы согласовать что считается "готово"
+  acceptance-write:
+    transition: confirm
+
+  # Ревью acceptance — механическая проверка
+  acceptance-review:
+    transition: auto
+
+  # Тесты — показываем черновик, структура тестов требует согласования
+  test-write:
+    transition: confirm
+
+  # Ревью тестов — механическая проверка
+  test-review:
+    transition: auto
+
+  # Написание кода — запускаем автоматически, результат виден через build/test
+  code-write:
+    transition: auto
+    max_retries: 3  # после 3 неудачных попыток — стоп, нужен человек
+
+  # Сборка — автоматически, ошибки уходят обратно в code-write
+  build:
+    transition: auto
+    max_retries: 2
+
+  # Тесты — автоматически, провалы уходят обратно в code-write
+  test-run:
+    transition: auto
+    max_retries: 3
+
+  # Ревью кода — показываем результат, человек решает двигаться дальше или нет
+  code-review:
+    transition: confirm
+    max_retries: 1

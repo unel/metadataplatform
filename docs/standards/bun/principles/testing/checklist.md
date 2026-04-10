@@ -1,0 +1,5 @@
+- [ ] Тесты запускаются через bun test, не через jest/vitest напрямую
+- [ ] Файлы тестов — *.test.ts или *.spec.ts
+- [ ] Mock'и через mock() из bun:test
+- [ ] Coverage через bun test --coverage
+- [ ] Нет зависимости от jest/vitest если используется bun test

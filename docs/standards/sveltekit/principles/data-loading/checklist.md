@@ -1,0 +1,5 @@
+- [ ] Секреты и БД — только в +page.server.ts
+- [ ] Данные публичного API без секретов — в +page.ts (universal)
+- [ ] Ошибки обрабатываются через error() хелпер
+- [ ] Redirect через redirect() хелпер, не через Response
+- [ ] Типы данных из load функции выводятся через PageData/LayoutData

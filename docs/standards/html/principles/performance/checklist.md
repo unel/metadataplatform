@@ -1,0 +1,5 @@
+- [ ] Критические ресурсы загружаются с preload
+- [ ] Некритический JS загружается с defer или async
+- [ ] Шрифты подключены с font-display: swap
+- [ ] Изображения имеют loading="lazy" кроме above-the-fold
+- [ ] DNS prefetch для внешних доменов

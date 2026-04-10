@@ -1,0 +1,7 @@
+- [ ] Неиспользуемые переменные и импорты
+- [ ] Сложность функций (cyclomatic complexity, глубина вложенности, число параметров)
+- [ ] Опасные паттерны (eval, == вместо ===, no-fallthrough в switch)
+- [ ] Недостижимый код
+- [ ] Нарушения типов в TypeScript (no-explicit-any, strict null checks)
+- [ ] Необработанные Promise (floating promises)
+- [ ] Inline-отключения правил без указания причины

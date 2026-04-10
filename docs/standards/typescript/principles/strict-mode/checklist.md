@@ -1,0 +1,4 @@
+- [ ] `strict: true` включён в tsconfig
+- [ ] Нет отключённых strict-флагов без комментария почему
+- [ ] `noUncheckedIndexedAccess` включён если работаем с массивами по индексу
+- [ ] `exactOptionalPropertyTypes` включён для точной работы с опциональными полями

@@ -1,0 +1,5 @@
+- [ ] Барьер явно определён — известно где заканчивается «грязная» зона
+- [ ] За барьером — error handling. Внутри барьера — assertions для инвариантов
+- [ ] Assertions не заменяют error handling и не используются для управления потоком
+- [ ] Assertions сообщают конкретно что нарушено: не `assert x != null`, а `assert x != null, "entity id required"`
+- [ ] Нет assertions в production-critical path — они должны отключаться без изменения поведения
