@@ -6,6 +6,9 @@
 
 ## Backlog
 
+### platform
+- `platform/bootstrap` — генерация базового конфига на первый запуск (`platform init`)
+
 ### store
 - `store/log-level` — настройка уровня логирования через конфиг/ENV
 - `store/protocol` — разбор и исполнение JSONL-операций (query/upsert/delete), фильтрация по ops
