@@ -1,0 +1,4 @@
+interface:
+  display_name: "Claude Repo Bridge"
+  short_description: "Interpret local Claude workflows and agent files inside Codex"
+  default_prompt: "Read the repository's Claude files, map the relevant Claude agents or commands to Codex behavior, and continue the workflow without assuming Claude-native runtime features."
