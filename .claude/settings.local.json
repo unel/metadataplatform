@@ -1,9 +1,18 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(go build *)",
+      "Bash(go test *)"
+    ]
+  },
   "mcpServers": {
     "context7": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"]
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
     }
   }
 }

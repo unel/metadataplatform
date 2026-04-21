@@ -7,7 +7,7 @@ _Исполнитель: агент **Ада** (`ada`)._
 ## Шаги
 
 1. Прочитай `tasks/$ARGUMENTS/spec.md`, `acceptance.md`, `status.md`
-2. Если `test-review: done` нет в `status.md` — сообщи что сначала нужен `/test-review` и остановись
+2. Если `test-review: done` нет в `status.md` — сообщи что сначала нужен `/test-write` + `/test-review` и остановись
 3. Прочитай `docs/standards/` — список папок, для каждой прочитай `description.md`
 4. Используй context7 для документации стека (`resolve library go`, `resolve library svelte` и т.п.)
 5. Запусти `/deps $ARGUMENTS` — получи полную картину зависимостей:
@@ -20,8 +20,12 @@ _Исполнитель: агент **Ада** (`ada`)._
    - переиспользуй найденные абстракции где уместно
 7. Покажи черновик пользователю, жди подтверждения или правок
 8. После подтверждения — запиши файлы
-9. Обнови `tasks/$ARGUMENTS/status.md` — этап `code-write: done`
+9. Если это переработка после `code-review: failed` — используй `/fix-code $ARGUMENTS` вместо этого шага
+10. Обнови `tasks/$ARGUMENTS/status.md` — этап `code-write: done`
+11. **Каскадный сброс:** если в `status.md` уже было `code-review: done` — выставь `code-review: pending`, а все последующие шаги (`build`, `test-run`) переведи в `needs-recheck`
 
 ## Важно
+
+Ада пишет только реализацию. Тесты — зона ответственности Кроули и Азирафаля (`/test-write`).
 
 Если в процессе возникает архитектурный вопрос — предложить `/rfc`, не решать самостоятельно.

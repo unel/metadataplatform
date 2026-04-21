@@ -15,7 +15,9 @@ _Исполнитель: агент **Танк** (`tank`)._
    - ключевых НФТ которые можно проверить тестом (производительность, параллелизм и т.п.)
 4. Покажи черновик пользователю, жди подтверждения или правок
 5. После подтверждения — запиши в `tasks/$ARGUMENTS/acceptance.md`
-6. Обнови `tasks/$ARGUMENTS/status.md` — этап `acceptance-write: done`
+6. Если это переработка после `acceptance-review: failed` — используй `/fix-acceptance $ARGUMENTS` вместо этого шага
+7. Обнови `tasks/$ARGUMENTS/status.md` — этап `acceptance-write: done`
+8. **Каскадный сброс:** если в `status.md` уже было `acceptance-review: done` — выставь `acceptance-review: pending`, а все последующие шаги (`test-write`, `test-review`, `code-write`, `code-review`, `build`, `test-run`) переведи в `needs-recheck`
 
 ## Формат acceptance.md
 

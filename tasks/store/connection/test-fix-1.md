@@ -1,0 +1,10 @@
+# test-fix-1: правки позитивных тестов, инфраструктуры и adversarial тестов
+
+- [FT-07] (Азирафаль): заменил `logs.waitForMsg("conn_id", time.Second)` на `logs.waitForConnID(time.Second)` — conn_id живёт в structured attrs, не в msg поле
+- [FT-08/FT-09] (Азирафаль): расширил комментарий перед FT-09 — явно указано что это техническое ограничение embedded runner; настоящий os/signal процесс обрабатывает SIGTERM и SIGINT через отдельные каналы, но логика shutdown идентична
+- [FT-13] (Азирафаль): убрал `time.Sleep(100ms)`, заменил на `logs.waitForNConnIDs(clientCount, time.Second)` — детерминированное ожидание всех conn_id
+- [NFT-04] (Азирафаль): убрал `time.Sleep(100ms)`, добавил assertion что store логирует ошибку записи (`error` / `write` / INFO+`conn`) с таймаутом 1s
+- [EDGE-01b] (Азирафаль): изолировал соединения по итерациям — каждая итерация создаёт своё соединение, берёт baseline после `waitForNConnIDs(i+1)` чтобы гарантировать что лог connection-establishment этой итерации уже зафиксирован
+- [testhelpers] (Азирафаль): комментарий `newTestScanner` уже корректен ("Буфер 4 МБ нужен для тестов с большими строками"), функция добавляет реальную ценность — правок не требуется
+- [NFT-06] (Кроули): `connection_test.go:616` — заменил `t.Log("store exited before client disconnected — acceptable if no active processing")` на `t.Fatal(...)`. Тест теперь фальсифицируем: если store завершится до закрытия соединения — упадёт с явным сообщением о нарушении спеки (5s graceful shutdown).
+- [NFT-05] (Кроули): `connection_test.go:568` — переименовал тест `TestStore_UnexpectedClientClose_LoggedAtInfo` → `TestStore_ClientClose_PartialRead_LoggedAtDebug`. Убрал `SetLinger(0)` трюк (на Unix socket не даёт RST, только clean EOF). Новый сценарий: клиент отправляет неполную строку без `\n` и закрывает — store получает clean EOF. Assertion изменён с `INFO` на `DEBUG` (соответствует спеке: "нормальное закрытие → DEBUG"). Тест фальсифицируем: если store залогирует на INFO вместо DEBUG — упадёт.
