@@ -6,8 +6,7 @@ _Исполнитель: агент **Ада** (`ada`)._
 
 ## Шаги
 
-1. Прочитай `tasks/$ARGUMENTS/status.md` — если `code-review: done` нет, сообщи что нужен `/code-review` и остановись
-2. Определи затронутые бинари по пути фичи и `tasks/$ARGUMENTS/deps.md`
+1. Определи затронутые бинари по пути фичи и `tasks/$ARGUMENTS/deps.md`
 3. Для каждого затронутого бинаря запусти `go build ./cmd/<binary>/...`
 4. Если есть frontend-изменения — запусти `bun run build`
 5. Зафиксируй результат в `tasks/$ARGUMENTS/status.md`:

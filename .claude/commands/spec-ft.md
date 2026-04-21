@@ -17,6 +17,7 @@ _Исполнитель: агент **Танк** (`tank`)._
 5. Покажи черновик пользователю и жди подтверждения или правок
 6. После подтверждения — запиши в `tasks/$ARGUMENTS/spec.md` секцию `## Функциональные требования`
 7. Обнови `tasks/$ARGUMENTS/status.md` — этап `spec-ft: done`
+8. **Каскадный сброс:** если в `status.md` уже было `spec-review: done` — выставь `spec-review: pending`, а все последующие шаги (`spec`, `acceptance-write`, `acceptance-review`, `test-write`, `test-review`, `code-write`, `code-review`, `build`, `test-run`) переведи в `needs-recheck`
 
 ## Формат секции в spec.md
 

@@ -11,7 +11,11 @@ _Исполнитель: агент **Харли** (`harley`) — оркестр
    - если `confirm` — напиши "Сценарии написаны, продолжаем к ревью? (y/n)" и жди ответа. Если отказ — остановись.
    - если `auto` или ключ отсутствует — продолжай сразу
 3. Запусти `/acceptance-review $ARGUMENTS`
-4. Если `acceptance-review: failed` в `status.md` — остановись, оркестратор решит что делать дальше
+4. Если `acceptance-review: failed` в `status.md`:
+   - Прочитай `max_retries` для `acceptance-review` из `.claude/project.yaml`
+   - Прочитай `acceptance-iterations` из `tasks/$ARGUMENTS/status.md` (если нет — считай 0)
+   - Если `acceptance-iterations ≥ max_retries` — стоп, показать все провалы, ждать инструкций пользователя
+   - Иначе: инкрементируй `acceptance-iterations` в `status.md`, вызови `/fix-acceptance $ARGUMENTS`, затем вернись к шагу 3
 
 ## Важно
 

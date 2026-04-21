@@ -12,6 +12,7 @@ _Исполнитель: агент **Танк** (`tank`)._
 4. Покажи черновик пользователю и жди подтверждения или правок
 5. После подтверждения — запиши в `tasks/$ARGUMENTS/spec.md` секцию `## Нефункциональные требования`
 6. Обнови `tasks/$ARGUMENTS/status.md` — этап `spec-nft: done`
+7. **Каскадный сброс:** если в `status.md` уже было `spec-review: done` — выставь `spec-review: pending`, а все последующие шаги (`spec`, `acceptance-write`, `acceptance-review`, `test-write`, `test-review`, `code-write`, `code-review`, `build`, `test-run`) переведи в `needs-recheck`
 
 ## Категории НФТ (бери только релевантные)
 

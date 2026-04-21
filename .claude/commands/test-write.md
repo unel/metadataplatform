@@ -17,7 +17,9 @@ _Исполнители: агенты **Кроули** (`crowley`) и **Азир
    - тест проверяет именно то что описано в Then — не больше, не меньше
 5. Покажи черновик пользователю, жди подтверждения или правок
 6. После подтверждения — запиши тесты в соответствующие файлы
-7. Обнови `tasks/$ARGUMENTS/status.md` — этап `test-write: done`
+7. Если это переработка после `test-review: failed` — используй `/fix-test $ARGUMENTS` вместо этого шага
+8. Обнови `tasks/$ARGUMENTS/status.md` — этап `test-write: done`
+9. **Каскадный сброс:** если в `status.md` уже было `test-review: done` — выставь `test-review: pending`, а все последующие шаги (`code-write`, `code-review`, `build`, `test-run`) переведи в `needs-recheck`
 
 ## Важно
 

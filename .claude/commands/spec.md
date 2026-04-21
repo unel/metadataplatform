@@ -15,7 +15,12 @@ _Исполнитель: агент **Харли** (`harley`) — оркестр
    - если `confirm` — напиши "НФТ готовы, продолжаем к ревью? (y/n)" и жди ответа. Если отказ — остановись.
    - если `auto` или ключ отсутствует — продолжай сразу
 5. Запусти `/spec-review $ARGUMENTS`
-6. Обнови `tasks/$ARGUMENTS/status.md` — этап `spec: done`
+6. Если `spec-review: failed` в `status.md`:
+   - Прочитай `max_retries` для `spec-review` из `.claude/project.yaml`
+   - Прочитай `spec-iterations` из `tasks/$ARGUMENTS/status.md` (если нет — считай 0)
+   - Если `spec-iterations ≥ max_retries` — стоп, показать все провалы, ждать инструкций пользователя
+   - Иначе: инкрементируй `spec-iterations` в `status.md`, вызови `/fix-spec $ARGUMENTS`, затем вернись к шагу 5
+7. Обнови `tasks/$ARGUMENTS/status.md` — этап `spec: done`
 
 ## Важно
 
