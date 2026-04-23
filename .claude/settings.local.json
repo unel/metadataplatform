@@ -2,7 +2,21 @@
   "permissions": {
     "allow": [
       "Bash(go build *)",
-      "Bash(go test *)"
+      "Bash(go test *)",
+      "WebFetch(domain:en.wikiquote.org)",
+      "WebFetch(domain:www.goodreads.com)",
+      "WebSearch",
+      "WebFetch(domain:movie-sounds.org)",
+      "WebFetch(domain:screenrant.com)",
+      "WebFetch(domain:transcripts.foreverdreaming.org)",
+      "WebFetch(domain:imsdb.com)",
+      "WebFetch(domain:interstellarfilm.fandom.com)",
+      "WebFetch(domain:gist.github.com)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:www.imdb.com)",
+      "WebFetch(domain:addamsfamily.fandom.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)"
     ]
   },
   "mcpServers": {

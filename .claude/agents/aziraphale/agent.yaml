@@ -1,0 +1,48 @@
+name: aziraphale
+entrypoint: AGENT.md
+required:
+  - AGENT.md
+  - BOUNDARIES.md
+  - SOUL.md
+  - RELATIONSHIPS.md
+recommended:
+  - MEMORIES.md
+  - VOICE.md
+  - QUOTES.md
+optional:
+  - LORE.md
+profiles:
+  default:
+    include:
+      - AGENT.md
+      - BOUNDARIES.md
+      - SOUL.md
+      - RELATIONSHIPS.md
+      - MEMORIES.md
+      - VOICE.md
+      - QUOTES.md
+  lean:
+    include:
+      - AGENT.md
+      - BOUNDARIES.md
+      - SOUL.md
+      - RELATIONSHIPS.md
+  full:
+    include:
+      - AGENT.md
+      - BOUNDARIES.md
+      - SOUL.md
+      - RELATIONSHIPS.md
+      - MEMORIES.md
+      - VOICE.md
+      - QUOTES.md
+      - LORE.md
+budgets:
+  AGENT.md: 900
+  BOUNDARIES.md: 600
+  SOUL.md: 1000
+  RELATIONSHIPS.md: 700
+  MEMORIES.md: 500
+  VOICE.md: 700
+  QUOTES.md: 500
+  LORE.md: 800

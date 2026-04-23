@@ -5,7 +5,8 @@
 ## Что считается чем
 
 - `.claude/commands/*.md` -> procedural skills / workflow prompts
-- `.claude/agents/*.md` -> role prompts / execution styles
+- `.claude/agents/<name>/AGENT.md` -> role contract / execution style entrypoint
+- `.claude/agents/<name>/` -> layered agent bundle (`AGENT`, `SOUL`, `BOUNDARIES`, `RELATIONSHIPS`, etc.)
 - `CLAUDE.md` -> repo-level orchestration rules
 - `.claude/project.yaml` -> transitions, retries, proficiency, status policy
 
@@ -23,7 +24,7 @@
 ## Как это использовать в Codex
 
 1. Если пользователь ссылается на Claude-команду, сначала открыть файл из `.claude/commands/`.
-2. Если в команде указан исполнитель, открыть его файл из `.claude/agents/`.
+2. Если в команде указан исполнитель, открыть директорию агента из `.claude/agents/<name>/` и читать слои в порядке приоритета.
 3. Выполнить задачу средствами Codex, сохранив файловые конвенции и порядок шагов.
 4. Не предполагать наличие Claude runtime, `Skill`, `Agent`, `SendMessage` и MCP только потому, что они упомянуты в текстах.
 

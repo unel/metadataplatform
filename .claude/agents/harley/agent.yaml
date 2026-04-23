@@ -1,0 +1,48 @@
+name: harley
+entrypoint: AGENT.md
+required:
+  - AGENT.md
+  - BOUNDARIES.md
+  - SOUL.md
+  - RELATIONSHIPS.md
+recommended:
+  - MEMORIES.md
+  - VOICE.md
+  - QUOTES.md
+optional:
+  - LORE.md
+profiles:
+  default:
+    include:
+      - AGENT.md
+      - BOUNDARIES.md
+      - SOUL.md
+      - RELATIONSHIPS.md
+      - MEMORIES.md
+      - VOICE.md
+      - QUOTES.md
+  lean:
+    include:
+      - AGENT.md
+      - BOUNDARIES.md
+      - SOUL.md
+      - RELATIONSHIPS.md
+  full:
+    include:
+      - AGENT.md
+      - BOUNDARIES.md
+      - SOUL.md
+      - RELATIONSHIPS.md
+      - MEMORIES.md
+      - VOICE.md
+      - QUOTES.md
+      - LORE.md
+budgets:
+  AGENT.md: 1800
+  BOUNDARIES.md: 800
+  SOUL.md: 1200
+  RELATIONSHIPS.md: 1000
+  MEMORIES.md: 600
+  VOICE.md: 700
+  QUOTES.md: 400
+  LORE.md: 500
