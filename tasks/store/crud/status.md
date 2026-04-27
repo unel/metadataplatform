@@ -1,0 +1,13 @@
+spec-ft: pending
+spec-nft: pending
+spec-review: pending
+spec: pending
+acceptance-write: pending
+acceptance-review: pending
+test-write: pending
+test-review: pending
+implement: pending
+build: pending
+test-run: pending
+code-review: pending
+tech-doc: pending
