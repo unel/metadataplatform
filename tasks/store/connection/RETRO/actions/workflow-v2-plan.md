@@ -78,11 +78,30 @@ updated: 2026-04-26T18:00
 
 ## Что осталось
 
-### Ретро `store/connection` — оставшиеся пункты
+### Ретро `store/connection` — action items (2026-04-27)
 
-После завершения составных скиллов — вернуться к оставшимся action-items из RETRO:
+Три потока, выполняются параллельно. Ветка: `retro/store/connection`.
 
-- [ ] Посмотреть список actions в `tasks/store/connection/RETRO/` — что ещё не сделано кроме 00-process-standard
+#### Поток А — Гримм (ревью-скиллы)
+- [x] **02** spec-sync-gate → `docs/standards/v2/04-code/02-review/base-checklist.md` + `base-plan.md`
+- [x] **05** тест-симулякры → `docs/standards/v2/03-tests/02-review/base-checklist.md` + `base-plan.md`
+- [x] **07** code-review все файлы Go → `docs/standards/v2/04-code/02-review/base-checklist.md` + `docs/standards/go/principles/concurrency/rules/goroutine-lifecycle.md`
+
+#### Поток Б — Танк (docs + acceptance/fix скиллы)
+- [x] **03** slog стандарт → `docs/standards/architecture/tdd/principles/structured-logging/` (3 файла) + `docs/standards/v2/03-tests/03-fix/base-plan.md` + `base-checklist.md` + `docs/standards/v2/04-code/03-fix/base-plan.md` + `base-checklist.md` + `docs/standards/v2/03-tests/02-review/base-checklist.md`
+- [x] **04** чек-лист сетевых протоколов → `docs/standards/v2/02-acceptance/01-write/base-checklist.md` + `docs/standards/v2/02-acceptance/02-review/base-checklist.md`
+- [x] **06** fix-report обязателен → `docs/standards/templates/fix-report.md` (шаблон) + `docs/standards/v2/04-code/03-fix/base-plan.md` + `base-checklist.md` + `docs/standards/v2/03-tests/03-fix/base-plan.md` + `base-checklist.md`
+
+#### Поток В — Ада (Go standards + code-write)
+- [x] **01** `// inv:` стандарт → `docs/standards/go/principles/invariants/` (3 файла) + `docs/standards/v2/04-code/02-review/base-checklist.md`
+- [x] **09** karpathy practices → `docs/standards/go/principles/implementation/` (3 файла) + `docs/standards/v2/04-code/01-write/base-plan.md` + `docs/standards/v2/04-code/03-fix/base-plan.md`
+
+#### Отдельно — Харли
+- [x] **08** RFC: Харли + Agent tool → написать `docs/rfc/harley-agent-tool.md`
+
+#### Отдельно — TODO
+- [ ] Актуализировать `CLAUDE.md` начиная с секции `## Workflow: статусы задач и каскадный сброс` — содержимое устарело после v2
+- [ ] Отметки о датах создания и изменения должны содержать информацию о часовом поясе (Z, если решили в UTC), значение должно браться через команду date (надо поиграться с форматом, чтобы выводить как ISO 8601 with timezone)
 
 ## Ключевые мета-правила принятые в v2
 
