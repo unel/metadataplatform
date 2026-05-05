@@ -65,19 +65,19 @@ _Участники: Танк, Ада Лавлейс, Гримм, Кроули, 
 
 | Что | Кто | |
 |---|---|---|
-| API Contracts в шаблоне acceptance | Танк | [→](RETRO/actions/01-api-contracts-acceptance.md) |
-| Контракт/Реализация в шаблоне spec | Танк | [→](RETRO/actions/02-spec-contract-vs-impl.md) |
-| Инварианты валидации в шаблоне acceptance | Танк | [→](RETRO/actions/03-invariants-in-acceptance.md) |
-| Recall: find по всем notes/complaints | Харли | [→](RETRO/actions/04-recall-aggregation.md) |
-| Backlog механизм (04-solve + 00-research) | Харли | [→](RETRO/actions/05-backlog-mechanism.md) |
-| Notes/complaints в каждом write-скилле | Харли | [→](RETRO/actions/06-notes-complaints-mandatory.md) |
-| Gate-блокировка pipeline | Харли | [→](RETRO/actions/07-pipeline-gate.md) |
-| Gate перед ретро | Харли | [→](RETRO/actions/08-retro-gate.md) |
-| Fix-report обязателен после failed | Харли | [→](RETRO/actions/09-fix-report-mandatory.md) |
-| scripts/feature-status.sh | Ада | [→](RETRO/actions/10-feature-status-script.md) |
-| scripts/log-note.sh и log-complaint.sh | Ада | [→](RETRO/actions/11-log-note-script.md) |
-| Start/end в status-log | Ада | [→](RETRO/actions/12-status-log-timestamps.md) |
-| Раздел "Голос" в AGENT.md каждого агента | Харли | [→](RETRO/actions/13-agent-voice.md) |
+| API Contracts в шаблоне acceptance | Танк | [→](actions/01-api-contracts-acceptance.md) |
+| Контракт/Реализация в шаблоне spec | Танк | [→](actions/02-spec-contract-vs-impl.md) |
+| Инварианты валидации в шаблоне acceptance | Танк | [→](actions/03-invariants-in-acceptance.md) |
+| Recall: find по всем notes/complaints | Харли | [→](actions/04-recall-aggregation.md) |
+| Backlog механизм (04-solve + 00-research) | Харли | [→](actions/05-backlog-mechanism.md) |
+| Notes/complaints в каждом write-скилле | Харли | [→](actions/06-notes-complaints-mandatory.md) |
+| Gate-блокировка pipeline | Харли | [→](actions/07-pipeline-gate.md) |
+| Gate перед ретро | Харли | [→](actions/08-retro-gate.md) |
+| Fix-report обязателен после failed | Харли | [→](actions/09-fix-report-mandatory.md) |
+| scripts/feature-status.sh | Ада | [→](actions/10-feature-status-script.md) |
+| scripts/log-note.sh и log-complaint.sh | Ада | [→](actions/11-log-note-script.md) |
+| Start/end в status-log | Ада | [→](actions/12-status-log-timestamps.md) |
+| Раздел "Голос" в AGENT.md каждого агента | Харли | [→](actions/13-agent-voice.md) |
 
 _Средний и низкий приоритет (22 задачи) + перенесённые из RETRO connection (7 задач) — в [backlog](../../_backlog/retro-store-crud.md)._
 
