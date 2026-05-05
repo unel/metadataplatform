@@ -16,7 +16,9 @@
       "WebFetch(domain:www.imdb.com)",
       "WebFetch(domain:addamsfamily.fandom.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(git log *)",
+      "Bash(git ls-tree *)"
     ]
   },
   "mcpServers": {
