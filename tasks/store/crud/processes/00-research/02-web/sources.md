@@ -1,0 +1,22 @@
+---
+purpose: URL источников с кратким описанием — для перепроверки фактов из report
+---
+
+- [uuid package - github.com/google/uuid](https://pkg.go.dev/github.com/google/uuid) — официальная документация, NewV7()
+- [Monotonicity in UUIDv7 · Issue #148 · google/uuid](https://github.com/google/uuid/issues/148) — batch-генерация без монотонности
+- [UUID in Go standard library · Issue #62026](https://github.com/golang/go/issues/62026) — принятый proposal, target release не назначен
+- [google/renameio](https://pkg.go.dev/github.com/google/renameio/v2) — atomic write стандарт де-факто
+- [natefinch/atomic](https://github.com/natefinch/atomic) — простой API для temp+rename
+- [Atomically writing files in Go (2017)](https://michael.stapelberg.ch/posts/2017-01-28-golang_atomically_writing/) — алгоритм с Sync()
+- [os.WriteFile not atomic · Issue #56173](https://github.com/golang/go/issues/56173) — официальное подтверждение
+- [consul-template issue #58: cross-device rename](https://github.com/hashicorp/consul-template/issues/58) — реальный кейс
+- [Working with Errors in Go 1.13](https://go.dev/blog/go1.13-errors) — sentinel errors и errors.Is()
+- [Sentinel errors slow code 500% - DoltHub](https://www.dolthub.com/blog/2024-05-31-benchmarking-go-error-handling/) — перформанс на hot path
+- [SOLID: Interface Segregation in Go](https://maddevs.io/blog/solid-interface-segregation-principle-in-golang/) — ISP паттерн
+- [Repository pattern in Go - Three Dots Labs](https://threedots.tech/post/repository-pattern-in-go/) — эталонная реализация
+- [Dynamic JSON in Go - eagain.net](https://eagain.net/articles/go-dynamic-json/) — two-pass decode через json.RawMessage
+- [json.Decoder vs Scanner - dev.to](https://dev.to/taqkarim/you-might-not-be-using-json-decoder-correctly-in-golang-12mb) — 64KB ограничение Scanner
+- [bufio.Scanner vs bufio.Reader](https://chriswilcox.dev/blog/2024/04/09/Scan-vs-Read-in-bufio.html) — сравнение подходов для JSONL
+- [golang-scribble](https://github.com/nanobox-io/golang-scribble) — файловая JSON БД, один файл на запись
+- [jorzel/go-repository-pattern](https://github.com/jorzel/go-repository-pattern) — несколько реализаций за одним интерфейсом
+- [Safe JSON file DB in Go - Gopher Academy](https://blog.gopheracademy.com/advent-2014/safe-json-file-db-in-go/) — конкурентные writes без locking = corruption
