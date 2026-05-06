@@ -6,7 +6,7 @@ updated: 2026-04-27
 
 # Action: стандарт процесса
 
-Стандарт перенесён в: `docs/standards/v2/process-standard.md`
+Стандарт перенесён в: `docs/standards/v2/stages-standard.md`
 
 ## Источник
 

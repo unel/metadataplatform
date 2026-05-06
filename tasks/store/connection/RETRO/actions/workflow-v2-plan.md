@@ -68,7 +68,7 @@ updated: 2026-04-26T18:00
 
 ### Стандарт процесса
 
-- [x] `tasks/store/connection/RETRO/actions/00-process-standard.md`
+- [x] `tasks/store/connection/RETRO/actions/00-stages-standard.md`
 - [x] `tasks/store/connection/RETRO/actions/00b-processes-catalog.md`
 
 ### Составные скиллы v2
@@ -101,7 +101,7 @@ updated: 2026-04-26T18:00
 
 #### Отдельно — TODO
 - [x] Актуализировать `CLAUDE.md` начиная с секции `## Workflow: статусы задач и каскадный сброс` — переписана под v2 (status-log.md, 6 статусов, clarification алгоритм)
-- [x] Отметки о датах — ISO 8601 UTC с суффиксом Z: `date -u +"%Y-%m-%dT%H:%M:%SZ"` → зафиксировано в CLAUDE.md и process-standard.md
+- [x] Отметки о датах — ISO 8601 UTC с суффиксом Z: `date -u +"%Y-%m-%dT%H:%M:%SZ"` → зафиксировано в CLAUDE.md и stages-standard.md
 
 ## Ключевые мета-правила принятые в v2
 
