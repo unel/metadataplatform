@@ -50,11 +50,16 @@ ID стабилен — не меняется при переносах межд
 - [ ] **BL-034** — main.go проверка в code-review: все файлы пакета в каждом раунде → [conn/c06-code-review-all-files](../0002-store-crud/artifacts/actions/c06-code-review-all-files.md)
 - [ ] **BL-035** — RFC: Харли + Agent tool для автономной оркестрации → [conn/c07-harley-agent-tool-rfc](../0002-store-crud/artifacts/actions/c07-harley-agent-tool-rfc.md)
 - [ ] **BL-036** — Обновить Go до 1.26.2 → [general/36-go-upgrade](actions/36-go-upgrade.md)
-- [ ] **BL-037** — Продумать флоу для задач не привязанных к фиче → [general/37-non-feature-workflow](actions/37-non-feature-workflow.md)
+- [ ] **BL-037** — Система флоу: формат описания, инициализация скелета, next/previous-step в frontmatter → [general/37-flow-system](actions/37-flow-system.md)
 - [x] **BL-038** — Мигрировать репозиторий на целевую структуру проекта → [general/38-project-structure-migration](actions/38-project-structure-migration.md) *(закрыто 2026-05-06)*
 - [x] **BL-039** — Написать `docs/standards/v2/stages.md`: каталог всех этапов и шагов workflow → [general/39-stages-spec](actions/39-stages-spec.md) *(закрыто 2026-05-06)*
 - [ ] **BL-040** — Вынести логику `store/cmd/` в internal-пакеты (config, handler, server) → [general/40-store-cmd-internal-packages](actions/40-store-cmd-internal-packages.md)
 - [ ] **BL-041** — Авторство в начале файлов: кто создавал и дополнял (агент + этап) → [general/41-module-authorship](actions/41-module-authorship.md)
+- [ ] **BL-042** — Флоу для задач не привязанных к фиче + какие ещё флоу могут быть → [general/42-non-feature-workflow](actions/42-non-feature-workflow.md)
+- [ ] **BL-043** — scripts/validate-status-log-meta.sh: проверка frontmatter status-log.md → [general/43-validate-status-log-meta](actions/43-validate-status-log-meta.md)
+- [ ] **BL-044** — scripts/add-status-log-meta.sh: добавление frontmatter в существующие status-log.md → [general/44-migrate-status-log-meta](actions/44-migrate-status-log-meta.md)
+- [ ] **BL-045** — Инструкции агентам: создавать brief/report до вызова begin/end-step → [general/45-agent-briefs-instructions](actions/45-agent-briefs-instructions.md)
+- [ ] **BL-046** — Интегрировать скрипты в инструкции к скиллам и агентам → [general/46-integrate-scripts-into-instructions](actions/46-integrate-scripts-into-instructions.md)
 
 ## Закрытые
 
