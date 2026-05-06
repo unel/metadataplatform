@@ -1,4 +1,6 @@
 ---
+superseded_by: tasks/_backlog/BACKLOG.md
+note: Пункты перенесены в BACKLOG.md как BL-001..BL-035. Этот файл — исторический архив.
 source: tasks/store/crud/processes/06-retro/04-solve/report-002.md
 actions: tasks/store/crud/processes/06-retro/actions/
 date: 2026-05-05T18:20:12Z

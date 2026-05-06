@@ -43,7 +43,19 @@ updated: 2026-04-26T18:00
 2. Дождись завершения всех тиммейтов
 3. Вызови TeamDelete
 
-## 5. Формирование отчёта
+## 5. Пополнение глобального бэклога
+
+Добавь каждый action item в `tasks/_backlog/BACKLOG.md`:
+
+1. Найди последний номер `BL-NNN` в файле — следующий будет `BL-(NNN+1)`
+2. Для каждого нового пункта:
+   ```
+   - [ ] **BL-NNN** — <название> → [<feature-code>/<action-filename>](path/to/action.md)
+   ```
+3. Создай action-файл в `tasks/<feature>/processes/06-retro/actions/` если ещё не существует
+4. Обнови поле `updated` в frontmatter BACKLOG.md
+
+## 6. Формирование отчёта
 
 Запиши `tasks/<feature>/processes/06-retro/04-solve/report-NNN.md`:
 
@@ -81,6 +93,6 @@ agent: Харли Куин
 
 ## Движение вперёд и назад
 
-**Done когда:** решения финализированы и проверены с командой, команда закрыта, report написан
+**Done когда:** решения финализированы и проверены с командой, команда закрыта, BACKLOG.md пополнен, report написан
 **Следующий:** 06-retro/05-write
 **Передаём:** report-NNN.md (таблица решений, actionable backlog)
