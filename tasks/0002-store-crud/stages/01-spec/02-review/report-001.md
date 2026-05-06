@@ -3,7 +3,7 @@ process: 01-spec/02-review
 run: 1
 date: 2026-04-28T15:05:00Z
 created: 2026-04-28T15:05:00Z
-see-also: tasks/store/crud/processes/01-spec/01-write/report-001.md
+see-also: tasks/0002-store-crud/stages/01-spec/01-write/report-001.md
 status: failed
 agent: Гримм
 checklist: открытые: data:null (CR-5), io.EOF (CR-4), search_tsv (CR-3), delete идемпотентность (CR-1), порядок List (CR-2), cleanup panic (CR-8)

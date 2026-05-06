@@ -4,7 +4,7 @@ process: 05-docs/03-fix
 run: 2
 date: 2026-05-05T06:26:35Z
 created: 2026-05-05T06:26:35Z
-see-also: tasks/store/crud/processes/05-docs/02-review/report-002.md
+see-also: tasks/0002-store-crud/stages/05-docs/02-review/report-002.md
 status: done
 agent: Танк
 checklist: все пункты закрыты

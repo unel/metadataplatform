@@ -4,9 +4,9 @@ run: 1
 date: 2026-04-29T13:36:15Z
 created: 2026-04-29T13:36:15Z
 spec-version: 1.4.0
-spec-source: tasks/store/crud/processes/01-spec/03-fix/report-004.md
-based-on: tasks/store/crud/processes/02-acceptance/01-write/report-001.md
-review-source: tasks/store/crud/processes/02-acceptance/02-review/report-001.md
+spec-source: tasks/0002-store-crud/stages/01-spec/03-fix/report-004.md
+based-on: tasks/0002-store-crud/stages/02-acceptance/01-write/report-001.md
+review-source: tasks/0002-store-crud/stages/02-acceptance/02-review/report-001.md
 status: done
 agent: Танк
 ---

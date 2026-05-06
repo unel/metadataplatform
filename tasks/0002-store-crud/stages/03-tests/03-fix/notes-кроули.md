@@ -10,7 +10,7 @@
 все тесты на логирование упадут. Надо убедиться что спека явно требует инъекцию logger.
 В spec v1.4.0 это не формализовано явно. Флаг для code review.
 
-[friction] Нет go.mod в tasks/store/crud/tests/ — тесты будут компилироваться
+[friction] Нет go.mod в store/tests/ — тесты будут компилироваться
 как часть модуля github.com/unel/metadataplatform. Это нормально пока
 store/fs и store/router пакеты существуют. Сейчас их нет — тесты не скомпилируются.
 Это ожидаемое поведение (red phase TDD).

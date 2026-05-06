@@ -5,7 +5,7 @@ run: 2
 date: 2026-05-04T12:23:05Z
 created: 2026-05-04T12:23:05Z
 see-also:
-  - tasks/store/crud/processes/03-tests/02-review/report-005.md
+  - tasks/0002-store-crud/stages/03-tests/02-review/report-005.md
 context: final-run
 status: done
 agent: Азирафаль
@@ -43,5 +43,5 @@ checklist: все пункты закрыты
 
 ## Полный вывод
 
-    ok  github.com/unel/metadataplatform/tasks/store/crud/tests/happy        1.084s
-    ok  github.com/unel/metadataplatform/tasks/store/crud/tests/adversarial  1.055s
+    ok  github.com/unel/metadataplatform/store/tests/happy        1.084s
+    ok  github.com/unel/metadataplatform/store/tests/adversarial  1.055s

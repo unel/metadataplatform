@@ -11,7 +11,7 @@ checklist: все пункты закрыты
 
 ## Happy path тесты (Азирафаль)
 
-`tasks/store/crud/tests/happy/`
+`store/tests/happy/`
 
 | Файл | Тесты |
 |---|---|
@@ -31,7 +31,7 @@ checklist: все пункты закрыты
 
 ## Adversarial тесты (Кроули)
 
-`tasks/store/crud/tests/adversarial/`
+`store/tests/adversarial/`
 
 | Файл | Тесты |
 |---|---|

@@ -22,5 +22,5 @@ source: docs/standards/v2/06-retro/05-write/README.md
 
 ## Исходящие артефакты
 
-- `tasks/store/crud/RETRO.md`
+- `tasks/0002-store-crud/RETRO.md`
 - `06-retro/05-write/report-NNN.md`

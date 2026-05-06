@@ -4,7 +4,7 @@ process: 04-code/04-testing
 run: 1
 date: 2026-05-04T17:55:00Z
 created: 2026-05-04T17:55:00Z
-see-also: tasks/store/crud/processes/04-code/02-review/report-002.md
+see-also: tasks/0002-store-crud/stages/04-code/02-review/report-002.md
 status: done
 agent: Азирафаль
 checklist: все пункты закрыты
@@ -22,7 +22,7 @@ Happy path: 38 тестов, adversarial: 24 теста. Все зелёные. 
 
 ## Полный вывод
 
-### Happy path (`tasks/store/crud/tests/happy/`)
+### Happy path (`store/tests/happy/`)
 
 ```
 === RUN   TestEntity_Delete_ExistingRecord_RecordNoLongerFound
@@ -96,10 +96,10 @@ Happy path: 38 тестов, adversarial: 24 теста. Все зелёные. 
 === RUN   TestRouter_List_Entities_LogsDebugWithCount
 --- PASS: TestRouter_List_Entities_LogsDebugWithCount (0.00s)
 PASS
-ok  	github.com/unel/metadataplatform/tasks/store/crud/tests/happy	1.088s
+ok  	github.com/unel/metadataplatform/store/tests/happy	1.088s
 ```
 
-### Adversarial (`tasks/store/crud/tests/adversarial/`)
+### Adversarial (`store/tests/adversarial/`)
 
 ```
 === RUN   TestNFT_Atomic_UpsertInterruptedBySIGKILL_FileNotCorrupted
@@ -169,5 +169,5 @@ ok  	github.com/unel/metadataplatform/tasks/store/crud/tests/happy	1.088s
 === RUN   TestRouter_GetNonexistentEntity_LogsError
 --- PASS: TestRouter_GetNonexistentEntity_LogsError (0.00s)
 PASS
-ok  	github.com/unel/metadataplatform/tasks/store/crud/tests/adversarial	1.051s
+ok  	github.com/unel/metadataplatform/store/tests/adversarial	1.051s
 ```

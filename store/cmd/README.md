@@ -5,11 +5,11 @@ Unix-socket сервер для приёма и обработки JSONL-соо�
 ## Сборка
 
 ```sh
-mkdir -p dist
-go build -o dist/store ./cmd/store
+mkdir -p store/dist
+go build -o store/dist/store ./store/cmd/
 ```
 
-Бинарь складывается в `dist/store`, а не в корень репозитория.
+Бинарь складывается в `store/dist/store`.
 
 ## Запуск
 

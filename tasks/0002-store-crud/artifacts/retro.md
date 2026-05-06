@@ -59,7 +59,7 @@ _Участники: Танк, Ада Лавлейс, Гримм, Кроули, 
 ## Action items
 
 Полный backlog (35 задач): **[tasks/_backlog/retro-store-crud.md](../../_backlog/retro-store-crud.md)**
-Детали: **[tasks/store/crud/RETRO/actions/](RETRO/actions/)**
+Детали: **[tasks/0002-store-crud/RETRO/actions/](RETRO/actions/)**
 
 ### Высокий приоритет — до старта следующей фичи
 

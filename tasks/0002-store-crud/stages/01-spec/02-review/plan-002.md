@@ -15,7 +15,7 @@ date: 2026-04-28T20:02:43Z
 
 ## 1. Сбор контекста
 
-- Читаем спеку из tasks/store/crud/processes/01-spec/03-fix/report-001.md (v1.1.0)
+- Читаем спеку из tasks/0002-store-crud/stages/01-spec/03-fix/report-001.md (v1.1.0)
 - Читаем PROJECT.md — схема БД, архитектура, стек
 - Смежные спеки: store/connection (реализована), store/query (в roadmap) — зависимости есть
 - Go-стандарты: docs/standards/go/principles/ (concurrency, error-handling, idioms)

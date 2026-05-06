@@ -9,8 +9,8 @@ base-plan: 01-spec-fix v1.0.0
 
 ## Источники
 
-- Спека: `tasks/store/crud/processes/01-spec/03-fix/report-002.md`
-- Замечания: `tasks/store/crud/processes/01-spec/02-review/report-003.md`
+- Спека: `tasks/0002-store-crud/stages/01-spec/03-fix/report-002.md`
+- Замечания: `tasks/0002-store-crud/stages/01-spec/02-review/report-003.md`
 
 ## CR-14 [critical] — Named return в atomic write
 

@@ -4,7 +4,7 @@ process: 03-tests/02-review
 run: 3
 date: 2026-04-30T07:10:00Z
 created: 2026-04-30T07:10:00Z
-see-also: tasks/store/crud/processes/03-tests/03-fix/report-002.md
+see-also: tasks/0002-store-crud/stages/03-tests/03-fix/report-002.md
 status: done
 agent: Гримм
 checklist: все пункты закрыты

@@ -9,8 +9,8 @@ base-plan: 01-spec-fix v1.0.0
 
 ## Источники
 
-- Спека: `tasks/store/crud/processes/01-spec/01-write/report-001.md`
-- Замечания: `tasks/store/crud/processes/01-spec/02-review/report-001.md`
+- Спека: `tasks/0002-store-crud/stages/01-spec/01-write/report-001.md`
+- Замечания: `tasks/0002-store-crud/stages/01-spec/02-review/report-001.md`
 
 ## CR-1 [warning] — Delete не идемпотентен: нет обоснования
 

@@ -18,4 +18,4 @@ checklist: все пункты закрыты
 | `store/fs/README.md` | Инициализация, структура файлов, поведение операций, безопасность, логирование |
 | `store/fs/TECH.md` | ADR: атомарная запись, сохранение created_at, path traversal protection, Entity vs обёртки для Relation/Job |
 | `store/router/README.md` | Протокол JSONL: формат запроса/ответа, все операции с примерами, коды ошибок, поведение при parse error |
-| `tasks/store/crud/processes/05-docs/01-write/README.md` | Инстанс process README с метаданными фичи |
+| `tasks/0002-store-crud/stages/05-docs/01-write/README.md` | Инстанс process README с метаданными фичи |

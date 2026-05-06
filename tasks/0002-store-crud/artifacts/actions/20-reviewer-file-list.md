@@ -9,8 +9,8 @@
 Оркестратор перед запуском ревью-скилла: собирает список релевантных файлов и передаёт явно в промпте:
 ```
 Файлы для ревью:
-- tasks/store/crud/processes/01-spec/01-write/report-001.md
-- tasks/store/crud/spec.md
+- tasks/0002-store-crud/stages/01-spec/01-write/report-001.md
+- tasks/0002-store-crud/spec.md
 ```
 
 ## Шаги

@@ -3,7 +3,7 @@ process: 02-acceptance/02-review
 run: 2
 date: 2026-04-29T18:16:41Z
 created: 2026-04-29T18:16:41Z
-see-also: tasks/store/crud/processes/02-acceptance/02-review/report-001.md
+see-also: tasks/0002-store-crud/stages/02-acceptance/02-review/report-001.md
 status: failed
 agent: Гримм
 checklist: открытые: AR-5

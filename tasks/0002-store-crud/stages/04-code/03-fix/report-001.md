@@ -4,7 +4,7 @@ process: 04-code/03-fix
 run: 1
 date: 2026-05-04T17:30:56Z
 created: 2026-05-04T17:30:56Z
-see-also: tasks/store/crud/processes/04-code/02-review/report-001.md
+see-also: tasks/0002-store-crud/stages/04-code/02-review/report-001.md
 status: done
 agent: Ада Лавлейс
 checklist: все пункты закрыты
@@ -32,8 +32,8 @@ checklist: все пункты закрыты
 
 ```
 ok  github.com/unel/metadataplatform/cmd/store
-ok  github.com/unel/metadataplatform/tasks/store/crud/tests/adversarial
-ok  github.com/unel/metadataplatform/tasks/store/crud/tests/happy
+ok  github.com/unel/metadataplatform/store/tests/adversarial
+ok  github.com/unel/metadataplatform/store/tests/happy
 ```
 
 Прошло: все (68/68) | Упало: 0

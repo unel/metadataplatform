@@ -3,7 +3,7 @@ process: 01-spec/02-review
 run: 5
 date: 2026-04-29T10:49:15Z
 created: 2026-04-29T10:49:15Z
-see-also: tasks/store/crud/processes/01-spec/02-review/report-004.md
+see-also: tasks/0002-store-crud/stages/01-spec/02-review/report-004.md
 status: pass
 agent: Гримм
 checklist: CR-1—CR-20 закрыты | открытые: CR-21 [note]

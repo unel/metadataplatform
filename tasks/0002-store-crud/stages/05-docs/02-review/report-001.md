@@ -4,7 +4,7 @@ process: 05-docs/02-review
 run: 1
 date: 2026-05-04T18:20:00Z
 created: 2026-05-04T18:20:00Z
-see-also: tasks/store/crud/processes/05-docs/01-write/report-001.md
+see-also: tasks/0002-store-crud/stages/05-docs/01-write/report-001.md
 status: failed
 agent: Гримм
 checklist: все пункты закрыты

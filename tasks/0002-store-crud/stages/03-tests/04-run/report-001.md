@@ -23,7 +23,7 @@ checklist: все пункты закрыты
 
 setup failed — один пакет, одна причина:
 
-    tasks/store/crud/tests/happy/nft_test.go:10:2:
+    store/tests/happy/nft_test.go:10:2:
       no required module provides package github.com/google/uuid
 
 Плюс транзитивно: store, store/fs, store/router — не существуют.
@@ -33,7 +33,7 @@ setup failed — один пакет, одна причина:
 
 setup failed — пакет не скомпилировался:
 
-    tasks/store/crud/tests/adversarial/atomic_test.go:17:2:
+    store/tests/adversarial/atomic_test.go:17:2:
       no required module provides package github.com/unel/metadataplatform/store
 
 Плюс: store/fs, store/router — не существуют.
@@ -62,14 +62,14 @@ _Тесты прошедшие без реализации — красный ф
 
 ## Полный вывод
 
-    # github.com/unel/metadataplatform/tasks/store/crud/tests/happy
-    tasks/store/crud/tests/happy/nft_test.go:10:2: no required module provides package github.com/google/uuid; to add it:
+    # github.com/unel/metadataplatform/store/tests/happy
+    store/tests/happy/nft_test.go:10:2: no required module provides package github.com/google/uuid; to add it:
             go get github.com/google/uuid
-    FAIL    github.com/unel/metadataplatform/tasks/store/crud/tests/happy [setup failed]
+    FAIL    github.com/unel/metadataplatform/store/tests/happy [setup failed]
     FAIL
 
-    # github.com/unel/metadataplatform/tasks/store/crud/tests/adversarial
-    tasks/store/crud/tests/adversarial/atomic_test.go:17:2: no required module provides package github.com/unel/metadataplatform/store; to add it:
+    # github.com/unel/metadataplatform/store/tests/adversarial
+    store/tests/adversarial/atomic_test.go:17:2: no required module provides package github.com/unel/metadataplatform/store; to add it:
             go get github.com/unel/metadataplatform/store
-    FAIL    github.com/unel/metadataplatform/tasks/store/crud/tests/adversarial [setup failed]
+    FAIL    github.com/unel/metadataplatform/store/tests/adversarial [setup failed]
     FAIL

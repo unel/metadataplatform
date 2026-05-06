@@ -19,8 +19,8 @@ source: docs/standards/v2/06-retro/02-collect/README.md
 ## Входящие артефакты
 
 - `06-retro/01-recall/report-NNN.md` — список участников
-- `tasks/store/crud/notes-<агент>.md` и `complaints-<агент>.md`
-- `tasks/store/crud/notes-user.md` и `complaints-user.md` если есть
+- `tasks/0002-store-crud/notes-<агент>.md` и `complaints-<агент>.md`
+- `tasks/0002-store-crud/notes-user.md` и `complaints-user.md` если есть
 
 ## Исходящие артефакты
 

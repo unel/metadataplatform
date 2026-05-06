@@ -3,7 +3,7 @@ process: 01-spec/02-review
 run: 2
 date: 2026-04-28T20:09:26Z
 created: 2026-04-28T20:09:26Z
-see-also: tasks/store/crud/processes/01-spec/02-review/report-001.md
+see-also: tasks/0002-store-crud/stages/01-spec/02-review/report-001.md
 status: failed
 agent: Гримм
 checklist: все пункты закрыты | открытые: CR-9 warning, CR-10 warning, CR-11—CR-13 note

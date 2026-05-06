@@ -10,12 +10,12 @@ agent: Азирафаль
 
 ## Исправленные файлы
 
-- `tasks/store/crud/tests/happy/relation_test.go` — все вызовы `s.Get/Upsert/Delete/List` заменены на `s.Relations().Get/Upsert/Delete/List`
-- `tasks/store/crud/tests/happy/job_test.go` — все вызовы `s.Get/Upsert/Delete/List` заменены на `s.Jobs().Get/Upsert/Delete/List`
-- `tasks/store/crud/tests/happy/router_happy_test.go` — `router.New(s, s, s, nil)` → `router.New(s.Entities(), s.Relations(), s.Jobs(), nil)`; compile-time assertions переписаны (только EntityStore для `*fs.Store`); `s.Upsert(ctx, entity)` в Arrange → `s.Entities().Upsert(...)`
-- `tasks/store/crud/tests/happy/router_conn_test.go` — `router.New(s, s, s, nil)` → `router.New(s.Entities(), s.Relations(), s.Jobs(), nil)`
-- `tasks/store/crud/tests/happy/helpers_logger_test.go` — `router.New(s, s, s, logger)` → `router.New(s.Entities(), s.Relations(), s.Jobs(), logger)`
-- `tasks/store/crud/tests/happy/nft_test.go` — два дополнительных фикса: `t.Context()` → `context.Background()` (Go 1.22 не поддерживает `t.Context`); `assert.Equal(t, 7, ...)` → `assert.Equal(t, uuid.Version(7), ...)` (строгое сравнение типов)
+- `store/tests/happy/relation_test.go` — все вызовы `s.Get/Upsert/Delete/List` заменены на `s.Relations().Get/Upsert/Delete/List`
+- `store/tests/happy/job_test.go` — все вызовы `s.Get/Upsert/Delete/List` заменены на `s.Jobs().Get/Upsert/Delete/List`
+- `store/tests/happy/router_happy_test.go` — `router.New(s, s, s, nil)` → `router.New(s.Entities(), s.Relations(), s.Jobs(), nil)`; compile-time assertions переписаны (только EntityStore для `*fs.Store`); `s.Upsert(ctx, entity)` в Arrange → `s.Entities().Upsert(...)`
+- `store/tests/happy/router_conn_test.go` — `router.New(s, s, s, nil)` → `router.New(s.Entities(), s.Relations(), s.Jobs(), nil)`
+- `store/tests/happy/helpers_logger_test.go` — `router.New(s, s, s, logger)` → `router.New(s.Entities(), s.Relations(), s.Jobs(), logger)`
+- `store/tests/happy/nft_test.go` — два дополнительных фикса: `t.Context()` → `context.Background()` (Go 1.22 не поддерживает `t.Context`); `assert.Equal(t, 7, ...)` → `assert.Equal(t, uuid.Version(7), ...)` (строгое сравнение типов)
 
 ## Что было не так
 
@@ -36,7 +36,7 @@ agent: Азирафаль
 5. `helpers_logger_test.go` — аналогично.
 6. `nft_test.go` — `t.Context()` → `context.Background()` + добавлен импорт `context`; тип исправлен на `uuid.Version(7)`.
 
-Результат: `go test ./tasks/store/crud/tests/happy/...` — ok (36 тестов, все pass). Adversarial тесты не затронуты и тоже проходят.
+Результат: `go test ./store/tests/happy/...` — ok (36 тестов, все pass). Adversarial тесты не затронуты и тоже проходят.
 
 ## Clarification
 

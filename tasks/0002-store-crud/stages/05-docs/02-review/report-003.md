@@ -4,7 +4,7 @@ process: 05-docs/02-review
 run: 3
 date: 2026-05-05T06:26:51Z
 created: 2026-05-05T06:26:51Z
-see-also: tasks/store/crud/processes/05-docs/03-fix/report-002.md
+see-also: tasks/0002-store-crud/stages/05-docs/03-fix/report-002.md
 status: done
 agent: Гримм
 checklist: все пункты закрыты

@@ -9,7 +9,7 @@ date: 2026-04-28T20:02:43Z
 
 ## Контекст
 
-- [x] Спека прочитана: tasks/store/crud/processes/01-spec/03-fix/report-001.md (v1.1.0)
+- [x] Спека прочитана: tasks/0002-store-crud/stages/01-spec/03-fix/report-001.md (v1.1.0)
 - [x] PROJECT.md прочитан
 - [x] Смежные артефакты: store/connection (реализована), store/query (roadmap)
 - [ ] Go-стандарты: docs/standards/go/principles/ — директории существуют, файлы не найдены

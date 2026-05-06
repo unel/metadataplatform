@@ -6,7 +6,7 @@ date: 2026-04-29T10:49:15Z
 
 ## Plan — run 5
 
-**Артефакт:** `tasks/store/crud/processes/01-spec/03-fix/report-004.md` (spec v1.4.0)
+**Артефакт:** `tasks/0002-store-crud/stages/01-spec/03-fix/report-004.md` (spec v1.4.0)
 
 **Предыдущий статус:** failed (run 4) — CR-17—CR-20 [warning x4]
 

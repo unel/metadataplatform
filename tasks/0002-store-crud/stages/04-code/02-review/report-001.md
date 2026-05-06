@@ -5,7 +5,7 @@ run: 1
 date: 2026-05-04T12:44:24Z
 created: 2026-05-04T12:44:24Z
 see-also:
-  - tasks/store/crud/processes/04-code/01-write/report-001.md
+  - tasks/0002-store-crud/stages/04-code/01-write/report-001.md
 status: failed
 agent: Гримм
 checklist: открытые: path traversal, json omitempty, error leakage, string-based error matching, module size, atomicWrite defer order

@@ -3,7 +3,7 @@ process: 01-spec/03-fix
 run: 1
 date: 2026-04-28T15:20:00Z
 created: 2026-04-28T15:20:00Z
-see-also: tasks/store/crud/processes/01-spec/01-write/report-001.md
+see-also: tasks/0002-store-crud/stages/01-spec/01-write/report-001.md
 status: done
 agent: Танк
 checklist: все пункты закрыты

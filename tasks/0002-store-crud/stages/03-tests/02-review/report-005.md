@@ -5,7 +5,7 @@ run: 5
 date: 2026-05-04T12:11:22Z
 created: 2026-05-04T12:11:22Z
 see-also:
-  - tasks/store/crud/processes/03-tests/03-fix/report-004.md
+  - tasks/0002-store-crud/stages/03-tests/03-fix/report-004.md
 status: done
 agent: Гримм
 checklist: все пункты закрыты
