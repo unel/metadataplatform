@@ -6,13 +6,13 @@ _Режим: **Харли Куин**. Выполняется операторо�
 
 ## Инициализация
 
-Скопируй `README.md` из `docs/standards/v2/06-retro/02-collect/README.md` в `tasks/$ARGUMENTS/processes/06-retro/02-collect/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/06-retro/02-collect/README.md`.
+Скопируй `README.md` из `docs/standards/v2/06-retro/02-collect/README.md` в `tasks/$ARGUMENTS/stages/06-retro/02-collect/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/06-retro/02-collect/README.md`.
 
 ## Исполнение
 
 Прочитай `docs/standards/v2/06-retro/02-collect/base-plan.md` и `base-checklist.md`.
 
-Прочитай `tasks/$ARGUMENTS/processes/06-retro/01-recall/report-*.md` — возьми список участников.
+Прочитай `tasks/$ARGUMENTS/stages/06-retro/01-recall/report-*.md` — возьми список участников.
 
 ### Создание команды
 
@@ -42,7 +42,7 @@ _Режим: **Харли Куин**. Выполняется операторо�
 
 ## Отчёт
 
-Запиши `tasks/$ARGUMENTS/processes/06-retro/02-collect/report-NNN.md`:
+Запиши `tasks/$ARGUMENTS/stages/06-retro/02-collect/report-NNN.md`:
 
 ```markdown
 ---

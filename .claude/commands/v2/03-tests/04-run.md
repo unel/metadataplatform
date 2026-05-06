@@ -6,13 +6,13 @@ _Исполнитель: агент **Азирафаль** (`Азирафаль`
 
 ## Инициализация
 
-Скопируй `README.md` из `docs/standards/v2/03-tests/04-run/README.md` в `tasks/$ARGUMENTS/processes/03-tests/04-run/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/03-tests/04-run/README.md`.
+Скопируй `README.md` из `docs/standards/v2/03-tests/04-run/README.md` в `tasks/$ARGUMENTS/stages/03-tests/04-run/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/03-tests/04-run/README.md`.
 
 ## Исполнение
 
 Прочитай `docs/standards/v2/03-tests/04-run/base-plan.md` и `base-checklist.md`.
 
-Проверь что review прошёл: последний `tasks/$ARGUMENTS/processes/03-tests/02-review/report-*.md` со статусом `done`.
+Проверь что review прошёл: последний `tasks/$ARGUMENTS/stages/03-tests/02-review/report-*.md` со статусом `done`.
 
 Прочитай `PROJECT.md` — команда для запуска тестов.
 
@@ -34,7 +34,7 @@ _Исполнитель: агент **Азирафаль** (`Азирафаль`
 
 ## Отчёт
 
-Запиши `tasks/$ARGUMENTS/processes/03-tests/04-run/report-NNN.md`:
+Запиши `tasks/$ARGUMENTS/stages/03-tests/04-run/report-NNN.md`:
 
 ```markdown
 ---
@@ -74,4 +74,4 @@ _Тесты прошедшие без реализации — красный ф
 {{вывод тест-раннера или ключевые строки}}
 ```
 
-Обнови `tasks/$ARGUMENTS/processes/03-tests/04-run/README.md`: добавь `updated: {{datetime}}`.
+Обнови `tasks/$ARGUMENTS/stages/03-tests/04-run/README.md`: добавь `updated: {{datetime}}`.

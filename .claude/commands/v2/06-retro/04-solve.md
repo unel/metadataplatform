@@ -6,13 +6,13 @@ _Режим: **Харли Куин**. Выполняется операторо�
 
 ## Инициализация
 
-Скопируй `README.md` из `docs/standards/v2/06-retro/04-solve/README.md` в `tasks/$ARGUMENTS/processes/06-retro/04-solve/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/06-retro/04-solve/README.md`.
+Скопируй `README.md` из `docs/standards/v2/06-retro/04-solve/README.md` в `tasks/$ARGUMENTS/stages/06-retro/04-solve/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/06-retro/04-solve/README.md`.
 
 ## Исполнение
 
 Прочитай `docs/standards/v2/06-retro/04-solve/base-plan.md` и `base-checklist.md`.
 
-Прочитай `tasks/$ARGUMENTS/processes/06-retro/03-analyze/report-*.md` — сгруппированные проблемы и team name.
+Прочитай `tasks/$ARGUMENTS/stages/06-retro/03-analyze/report-*.md` — сгруппированные проблемы и team name.
 
 ### Выработка решений
 
@@ -34,7 +34,7 @@ _Режим: **Харли Куин**. Выполняется операторо�
 
 ## Отчёт
 
-Запиши `tasks/$ARGUMENTS/processes/06-retro/04-solve/report-NNN.md`:
+Запиши `tasks/$ARGUMENTS/stages/06-retro/04-solve/report-NNN.md`:
 
 ```markdown
 ---

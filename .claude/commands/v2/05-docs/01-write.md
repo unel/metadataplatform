@@ -6,14 +6,14 @@ _Исполнитель: агент **Танк** (`Танк`)._
 
 ## Инициализация
 
-Скопируй `README.md` из `docs/standards/v2/05-docs/01-write/README.md` в `tasks/$ARGUMENTS/processes/05-docs/01-write/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/05-docs/01-write/README.md`.
+Скопируй `README.md` из `docs/standards/v2/05-docs/01-write/README.md` в `tasks/$ARGUMENTS/stages/05-docs/01-write/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/05-docs/01-write/README.md`.
 
 ## Исполнение
 
 Прочитай `docs/standards/v2/05-docs/01-write/base-plan.md` и `base-checklist.md`.
 
 Входящие артефакты:
-- Spec и acceptance из `tasks/$ARGUMENTS/processes/`
+- Spec и acceptance из `tasks/$ARGUMENTS/stages/`
 - Код реализации
 - `PROJECT.md` — соглашения по документации
 
@@ -21,7 +21,7 @@ _Исполнитель: агент **Танк** (`Танк`)._
 
 ## Отчёт
 
-Запиши `tasks/$ARGUMENTS/processes/05-docs/01-write/report-NNN.md`:
+Запиши `tasks/$ARGUMENTS/stages/05-docs/01-write/report-NNN.md`:
 
 ```markdown
 ---
@@ -43,4 +43,4 @@ checklist: все пункты закрыты | открытые: {{список
 | ... | ... |
 ```
 
-Обнови `tasks/$ARGUMENTS/processes/05-docs/01-write/README.md`: добавь `updated: {{datetime}}`.
+Обнови `tasks/$ARGUMENTS/stages/05-docs/01-write/README.md`: добавь `updated: {{datetime}}`.

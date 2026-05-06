@@ -49,7 +49,7 @@ updated: 2026-04-26T18:00
 
 ## 6. Формирование отчёта
 
-Запиши `tasks/<feature>/processes/06-retro/03-analyze/report-NNN.md`:
+Запиши `tasks/<feature>/stages/06-retro/03-analyze/report-NNN.md`:
 
 ```markdown
 ---

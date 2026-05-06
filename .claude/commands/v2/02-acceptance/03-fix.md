@@ -8,9 +8,9 @@ _Исполнитель: агент **Танк** (`Танк`)._
 
 ## Шаг 1. Инициализация
 
-Создай директорию `tasks/$ARGUMENTS/processes/02-acceptance/03-fix/` если не существует.
+Создай директорию `tasks/$ARGUMENTS/stages/02-acceptance/03-fix/` если не существует.
 
-Скопируй `README.md` из `docs/standards/v2/02-acceptance/03-fix/README.md` в `tasks/$ARGUMENTS/processes/02-acceptance/03-fix/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/02-acceptance/03-fix/README.md`.
+Скопируй `README.md` из `docs/standards/v2/02-acceptance/03-fix/README.md` в `tasks/$ARGUMENTS/stages/02-acceptance/03-fix/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/02-acceptance/03-fix/README.md`.
 
 Запиши в `status-log.md`:
 ```
@@ -27,7 +27,7 @@ _Исполнитель: агент **Танк** (`Танк`)._
 - актуальный acceptance: последний `02-acceptance/03-fix/report-*.md`, если нет — `02-acceptance/01-write/report-*.md`
 - замечания: последний `02-acceptance/02-review/report-*.md`
 
-Сгенерируй `tasks/$ARGUMENTS/processes/02-acceptance/03-fix/plan.md`:
+Сгенерируй `tasks/$ARGUMENTS/stages/02-acceptance/03-fix/plan.md`:
 ```markdown
 ---
 generated: {{datetime}}
@@ -43,7 +43,7 @@ base-plan: 02-acceptance-fix v{{version}}
 
 ## Шаг 3. Генерация чек-листа
 
-Запиши `tasks/$ARGUMENTS/processes/02-acceptance/03-fix/checklist.md`:
+Запиши `tasks/$ARGUMENTS/stages/02-acceptance/03-fix/checklist.md`:
 ```markdown
 ---
 generated: {{datetime}}

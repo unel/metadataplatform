@@ -8,9 +8,9 @@ _Исполнитель: агент **Гримм** (`Гримм`)._
 
 ## Шаг 1. Инициализация
 
-Создай директорию `tasks/$ARGUMENTS/processes/02-acceptance/02-review/` если не существует.
+Создай директорию `tasks/$ARGUMENTS/stages/02-acceptance/02-review/` если не существует.
 
-Скопируй `README.md` из `docs/standards/v2/02-acceptance/02-review/README.md` в `tasks/$ARGUMENTS/processes/02-acceptance/02-review/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/02-acceptance/02-review/README.md`.
+Скопируй `README.md` из `docs/standards/v2/02-acceptance/02-review/README.md` в `tasks/$ARGUMENTS/stages/02-acceptance/02-review/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/02-acceptance/02-review/README.md`.
 
 Запиши в `status-log.md`:
 ```
@@ -24,9 +24,9 @@ _Исполнитель: агент **Гримм** (`Гримм`)._
 Прочитай:
 - `docs/standards/v2/02-acceptance/02-review/base-plan.md`
 - актуальную spec (последний report из `01-spec/`)
-- acceptance из последнего `tasks/$ARGUMENTS/processes/02-acceptance/01-write/report-*.md`
+- acceptance из последнего `tasks/$ARGUMENTS/stages/02-acceptance/01-write/report-*.md`
 
-Сгенерируй `tasks/$ARGUMENTS/processes/02-acceptance/02-review/plan.md`:
+Сгенерируй `tasks/$ARGUMENTS/stages/02-acceptance/02-review/plan.md`:
 ```markdown
 ---
 generated: {{datetime}}
@@ -47,7 +47,7 @@ base-plan: 02-acceptance-review v{{version}}
 - расширения из `docs/standards/v2/extensions/`
 - `plan.md`
 
-Запиши `tasks/$ARGUMENTS/processes/02-acceptance/02-review/checklist.md`:
+Запиши `tasks/$ARGUMENTS/stages/02-acceptance/02-review/checklist.md`:
 ```markdown
 ---
 generated: {{datetime}}

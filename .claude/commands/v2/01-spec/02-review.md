@@ -8,9 +8,9 @@ _Исполнитель: агент **Гримм** (`Гримм`)._
 
 ## Шаг 1. Инициализация
 
-Создай директорию `tasks/$ARGUMENTS/processes/01-spec/02-review/` если не существует.
+Создай директорию `tasks/$ARGUMENTS/stages/01-spec/02-review/` если не существует.
 
-Скопируй `README.md` из `docs/standards/v2/01-spec/02-review/README.md` в `tasks/$ARGUMENTS/processes/01-spec/02-review/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/01-spec/02-review/README.md`.
+Скопируй `README.md` из `docs/standards/v2/01-spec/02-review/README.md` в `tasks/$ARGUMENTS/stages/01-spec/02-review/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/01-spec/02-review/README.md`.
 
 Запиши в `status-log.md`:
 ```
@@ -23,10 +23,10 @@ _Исполнитель: агент **Гримм** (`Гримм`)._
 
 Прочитай:
 - `docs/standards/v2/01-spec/02-review/base-plan.md` — базовый план
-- последний `tasks/$ARGUMENTS/processes/01-spec/01-write/report-*.md` — spec
+- последний `tasks/$ARGUMENTS/stages/01-spec/01-write/report-*.md` — spec
 - `PROJECT.md` — архитектура, ограничения
 
-Сгенерируй `tasks/$ARGUMENTS/processes/01-spec/02-review/plan.md`:
+Сгенерируй `tasks/$ARGUMENTS/stages/01-spec/02-review/plan.md`:
 - Скопируй базовый план
 - Адаптируй под конкретную задачу: убери нерелевантные шаги, добавь специфичные
 - Укажи в мете версию базового плана
@@ -51,7 +51,7 @@ base-plan: 01-spec-review v{{version}}
 - нужные расширения из `docs/standards/v2/extensions/` — определи по контексту задачи
 - сгенерированный `plan.md` — добавь чек-пункты отражающие шаги плана
 
-Запиши `tasks/$ARGUMENTS/processes/01-spec/02-review/checklist.md`:
+Запиши `tasks/$ARGUMENTS/stages/01-spec/02-review/checklist.md`:
 ```markdown
 ---
 generated: {{datetime}}

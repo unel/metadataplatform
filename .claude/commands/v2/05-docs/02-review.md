@@ -6,7 +6,7 @@ _Исполнитель: агент **Гримм** (`Гримм`)._
 
 ## Инициализация
 
-Скопируй `README.md` из `docs/standards/v2/05-docs/02-review/README.md` в `tasks/$ARGUMENTS/processes/05-docs/02-review/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/05-docs/02-review/README.md`.
+Скопируй `README.md` из `docs/standards/v2/05-docs/02-review/README.md` в `tasks/$ARGUMENTS/stages/05-docs/02-review/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/05-docs/02-review/README.md`.
 
 ## Исполнение
 
@@ -21,7 +21,7 @@ _Исполнитель: агент **Гримм** (`Гримм`)._
 
 ## Отчёт
 
-Запиши `tasks/$ARGUMENTS/processes/05-docs/02-review/report-NNN.md`:
+Запиши `tasks/$ARGUMENTS/stages/05-docs/02-review/report-NNN.md`:
 
 ```markdown
 ---
@@ -49,4 +49,4 @@ checklist: все пункты закрыты | открытые: {{список
 **Рекомендация:** {{что исправить}}
 ```
 
-Обнови `tasks/$ARGUMENTS/processes/05-docs/02-review/README.md`: добавь `updated: {{datetime}}`.
+Обнови `tasks/$ARGUMENTS/stages/05-docs/02-review/README.md`: добавь `updated: {{datetime}}`.

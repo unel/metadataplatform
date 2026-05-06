@@ -8,9 +8,9 @@ _Исполнитель: агент **Танк** (`Танк`)._
 
 ## Шаг 1. Инициализация
 
-Создай директорию `tasks/$ARGUMENTS/processes/01-spec/03-fix/` если не существует.
+Создай директорию `tasks/$ARGUMENTS/stages/01-spec/03-fix/` если не существует.
 
-Скопируй `README.md` из `docs/standards/v2/01-spec/03-fix/README.md` в `tasks/$ARGUMENTS/processes/01-spec/03-fix/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/01-spec/03-fix/README.md`.
+Скопируй `README.md` из `docs/standards/v2/01-spec/03-fix/README.md` в `tasks/$ARGUMENTS/stages/01-spec/03-fix/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/01-spec/03-fix/README.md`.
 
 Запиши в `status-log.md`:
 ```
@@ -23,11 +23,11 @@ _Исполнитель: агент **Танк** (`Танк`)._
 
 Прочитай:
 - `docs/standards/v2/01-spec/03-fix/base-plan.md` — базовый план
-- актуальную spec: сначала последний `tasks/$ARGUMENTS/processes/01-spec/03-fix/report-*.md`, если нет — последний `tasks/$ARGUMENTS/processes/01-spec/01-write/report-*.md`
-- замечания: последний `tasks/$ARGUMENTS/processes/01-spec/02-review/report-*.md`
+- актуальную spec: сначала последний `tasks/$ARGUMENTS/stages/01-spec/03-fix/report-*.md`, если нет — последний `tasks/$ARGUMENTS/stages/01-spec/01-write/report-*.md`
+- замечания: последний `tasks/$ARGUMENTS/stages/01-spec/02-review/report-*.md`
 - `PROJECT.md` если замечания архитектурные
 
-Сгенерируй `tasks/$ARGUMENTS/processes/01-spec/03-fix/plan.md`:
+Сгенерируй `tasks/$ARGUMENTS/stages/01-spec/03-fix/plan.md`:
 - Скопируй базовый план
 - Адаптируй: перечисли конкретные CR-N из замечаний, для каждого — что меняется
 - Укажи в мете версию базового плана
@@ -52,7 +52,7 @@ base-plan: 01-spec-fix v{{version}}
 - нужные расширения из `docs/standards/v2/extensions/`
 - сгенерированный `plan.md`
 
-Запиши `tasks/$ARGUMENTS/processes/01-spec/03-fix/checklist.md`:
+Запиши `tasks/$ARGUMENTS/stages/01-spec/03-fix/checklist.md`:
 ```markdown
 ---
 generated: {{datetime}}

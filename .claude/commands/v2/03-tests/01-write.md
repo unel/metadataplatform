@@ -6,7 +6,7 @@ _Исполнитель: **параллельно Кроули и Азирафа
 
 ## Инициализация
 
-Скопируй `README.md` из `docs/standards/v2/03-tests/01-write/README.md` в `tasks/$ARGUMENTS/processes/03-tests/01-write/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/03-tests/01-write/README.md`.
+Скопируй `README.md` из `docs/standards/v2/03-tests/01-write/README.md` в `tasks/$ARGUMENTS/stages/03-tests/01-write/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/03-tests/01-write/README.md`.
 
 ## Исполнение
 
@@ -16,7 +16,7 @@ _Исполнитель: **параллельно Кроули и Азирафа
 
 Прочитай `docs/standards/v2/03-tests/01-write/base-plan.md` и `base-checklist.md`.
 
-Найди финальный acceptance: последний `tasks/$ARGUMENTS/processes/02-acceptance/03-fix/report-*.md`, если нет — `tasks/$ARGUMENTS/processes/02-acceptance/01-write/report-*.md`.
+Найди финальный acceptance: последний `tasks/$ARGUMENTS/stages/02-acceptance/03-fix/report-*.md`, если нет — `tasks/$ARGUMENTS/stages/02-acceptance/01-write/report-*.md`.
 
 Пиши happy path и contract тесты в `tasks/$ARGUMENTS/tests/happy/`.
 
@@ -34,7 +34,7 @@ _Исполнитель: **параллельно Кроули и Азирафа
 
 ## Отчёт
 
-После завершения обоих агентов — запиши `tasks/$ARGUMENTS/processes/03-tests/01-write/report-NNN.md`:
+После завершения обоих агентов — запиши `tasks/$ARGUMENTS/stages/03-tests/01-write/report-NNN.md`:
 
 ```markdown
 ---
@@ -70,4 +70,4 @@ checklist: все пункты закрыты | открытые: {{список
 {{pass/fail}}
 ```
 
-Обнови `tasks/$ARGUMENTS/processes/03-tests/01-write/README.md`: добавь `updated: {{datetime}}`.
+Обнови `tasks/$ARGUMENTS/stages/03-tests/01-write/README.md`: добавь `updated: {{datetime}}`.

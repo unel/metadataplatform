@@ -8,9 +8,9 @@ _Исполнитель: агент **Танк** (`Танк`)._
 
 ## Шаг 1. Инициализация
 
-Создай директорию `tasks/$ARGUMENTS/processes/00-research/01-interview/` если не существует.
+Создай директорию `tasks/$ARGUMENTS/stages/00-research/01-interview/` если не существует.
 
-Скопируй `README.md` из `docs/standards/v2/00-research/01-interview/README.md` в `tasks/$ARGUMENTS/processes/00-research/01-interview/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/00-research/01-interview/README.md`.
+Скопируй `README.md` из `docs/standards/v2/00-research/01-interview/README.md` в `tasks/$ARGUMENTS/stages/00-research/01-interview/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/00-research/01-interview/README.md`.
 
 Запиши в `status-log.md`:
 ```
@@ -33,7 +33,7 @@ updated: {{datetime}}
 - `PROJECT.md`
 - `PLAN.md`
 
-Сгенерируй `tasks/$ARGUMENTS/processes/00-research/01-interview/plan.md`:
+Сгенерируй `tasks/$ARGUMENTS/stages/00-research/01-interview/plan.md`:
 ```markdown
 ---
 purpose: План процесса interview — исполнитель читает перед стартом
@@ -55,7 +55,7 @@ base-plan: 00-research-interview v{{version}}
 - расширения из `docs/standards/v2/extensions/` по контексту
 - сгенерированный `plan.md`
 
-Запиши `tasks/$ARGUMENTS/processes/00-research/01-interview/checklist.md`:
+Запиши `tasks/$ARGUMENTS/stages/00-research/01-interview/checklist.md`:
 ```markdown
 ---
 purpose: Чек-лист прогона interview — исполнитель отмечает по ходу выполнения

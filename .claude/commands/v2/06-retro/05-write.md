@@ -6,19 +6,19 @@ _Режим: **Харли Куин**. Выполняется операторо�
 
 ## Инициализация
 
-Скопируй `README.md` из `docs/standards/v2/06-retro/03-write/README.md` в `tasks/$ARGUMENTS/processes/06-retro/03-write/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/06-retro/03-write/README.md`.
+Скопируй `README.md` из `docs/standards/v2/06-retro/03-write/README.md` в `tasks/$ARGUMENTS/stages/06-retro/03-write/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/06-retro/03-write/README.md`.
 
 ## Исполнение
 
 Прочитай `docs/standards/v2/06-retro/03-write/base-plan.md` и `base-checklist.md`.
 
-Прочитай `tasks/$ARGUMENTS/processes/06-retro/02-discuss/report-*.md`.
+Прочитай `tasks/$ARGUMENTS/stages/06-retro/02-discuss/report-*.md`.
 
 Запиши `tasks/$ARGUMENTS/RETRO.md` по шаблону из base-plan: что шло хорошо, проблемы по категориям, таблица решений, action items, открытые вопросы.
 
 ## Отчёт
 
-Запиши `tasks/$ARGUMENTS/processes/06-retro/03-write/report-NNN.md`:
+Запиши `tasks/$ARGUMENTS/stages/06-retro/03-write/report-NNN.md`:
 
 ```markdown
 ---

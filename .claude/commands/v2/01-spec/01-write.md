@@ -8,9 +8,9 @@ _Исполнитель: агент **Танк** (`Танк`)._
 
 ## Шаг 1. Инициализация
 
-Создай директорию `tasks/$ARGUMENTS/processes/01-spec/01-write/` если не существует.
+Создай директорию `tasks/$ARGUMENTS/stages/01-spec/01-write/` если не существует.
 
-Скопируй `README.md` из `docs/standards/v2/01-spec/01-write/README.md` в `tasks/$ARGUMENTS/processes/01-spec/01-write/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/01-spec/01-write/README.md`.
+Скопируй `README.md` из `docs/standards/v2/01-spec/01-write/README.md` в `tasks/$ARGUMENTS/stages/01-spec/01-write/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/01-spec/01-write/README.md`.
 
 Запиши в `status-log.md`:
 ```
@@ -25,10 +25,10 @@ _Исполнитель: агент **Танк** (`Танк`)._
 - `docs/standards/v2/01-spec/01-write/base-plan.md` — базовый план
 - `tasks/$ARGUMENTS/TASK.md` — описание задачи
 - `PROJECT.md` — архитектура, стек, ограничения
-- последний `tasks/$ARGUMENTS/processes/00-research/01-interview/report-*.md` (если существует)
-- последний `tasks/$ARGUMENTS/processes/00-research/02-web/report-*.md` (если существует)
+- последний `tasks/$ARGUMENTS/stages/00-research/01-interview/report-*.md` (если существует)
+- последний `tasks/$ARGUMENTS/stages/00-research/02-web/report-*.md` (если существует)
 
-Сгенерируй `tasks/$ARGUMENTS/processes/01-spec/01-write/plan.md`:
+Сгенерируй `tasks/$ARGUMENTS/stages/01-spec/01-write/plan.md`:
 - Скопируй базовый план
 - Адаптируй под конкретную задачу: убери нерелевантные шаги, добавь специфичные
 - Укажи в мете версию базового плана
@@ -53,7 +53,7 @@ base-plan: 01-spec-write v{{version}}
 - нужные расширения из `docs/standards/v2/extensions/` — определи по контексту задачи
 - сгенерированный `plan.md` — добавь чек-пункты отражающие шаги плана
 
-Запиши `tasks/$ARGUMENTS/processes/01-spec/01-write/checklist.md`:
+Запиши `tasks/$ARGUMENTS/stages/01-spec/01-write/checklist.md`:
 ```markdown
 ---
 generated: {{datetime}}

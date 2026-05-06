@@ -6,7 +6,7 @@ _Исполнитель: агент **Ада Лавлейс** (`Ада Лавл�
 
 ## Инициализация
 
-Скопируй `README.md` из `docs/standards/v2/04-code/01-write/README.md` в `tasks/$ARGUMENTS/processes/04-code/01-write/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/04-code/01-write/README.md`.
+Скопируй `README.md` из `docs/standards/v2/04-code/01-write/README.md` в `tasks/$ARGUMENTS/stages/04-code/01-write/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/04-code/01-write/README.md`.
 
 ## Исполнение
 
@@ -14,8 +14,8 @@ _Исполнитель: агент **Ада Лавлейс** (`Ада Лавл�
 
 Входящие артефакты:
 - Тесты: `tasks/$ARGUMENTS/tests/happy/` и `tasks/$ARGUMENTS/tests/adversarial/` — определяют контракт
-- Финальный acceptance: последний report из `tasks/$ARGUMENTS/processes/02-acceptance/`
-- Spec: последний report из `tasks/$ARGUMENTS/processes/01-spec/`
+- Финальный acceptance: последний report из `tasks/$ARGUMENTS/stages/02-acceptance/`
+- Spec: последний report из `tasks/$ARGUMENTS/stages/01-spec/`
 - `PROJECT.md` — стек, соглашения по структуре кода
 
 Пиши минимально необходимый код чтобы тесты прошли. Модули ≤ 150 строк. Безопасность по OWASP.
@@ -25,7 +25,7 @@ _Исполнитель: агент **Ада Лавлейс** (`Ада Лавл�
 
 ## Отчёт
 
-Запиши `tasks/$ARGUMENTS/processes/04-code/01-write/report-NNN.md`:
+Запиши `tasks/$ARGUMENTS/stages/04-code/01-write/report-NNN.md`:
 
 ```markdown
 ---
@@ -53,4 +53,4 @@ checklist: все пункты закрыты | открытые: {{список
 {{если что-то пришлось решать без явного указания в spec/acceptance}}
 ```
 
-Обнови `tasks/$ARGUMENTS/processes/04-code/01-write/README.md`: добавь `updated: {{datetime}}`.
+Обнови `tasks/$ARGUMENTS/stages/04-code/01-write/README.md`: добавь `updated: {{datetime}}`.

@@ -13,7 +13,7 @@ _Режим: **Харли Куин**. Выполняется операторо�
 Создай все директории сразу (включая фикс-шаги):
 
 ```
-tasks/$ARGUMENTS/processes/
+tasks/$ARGUMENTS/stages/
   00-research/01-interview/
   00-research/02-web/
   01-spec/01-write/

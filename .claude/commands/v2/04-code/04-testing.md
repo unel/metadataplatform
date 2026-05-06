@@ -6,13 +6,13 @@ _Исполнитель: агент **Азирафаль** (`Азирафаль`
 
 ## Инициализация
 
-Скопируй `README.md` из `docs/standards/v2/04-code/04-testing/README.md` в `tasks/$ARGUMENTS/processes/04-code/04-testing/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/04-code/04-testing/README.md`.
+Скопируй `README.md` из `docs/standards/v2/04-code/04-testing/README.md` в `tasks/$ARGUMENTS/stages/04-code/04-testing/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/04-code/04-testing/README.md`.
 
 ## Исполнение
 
 Прочитай `docs/standards/v2/04-code/04-testing/base-plan.md` и `base-checklist.md`.
 
-Проверь что code-review прошёл: последний report из `tasks/$ARGUMENTS/processes/04-code/02-review/` или `04-code/03-fix/` со статусом `done`.
+Проверь что code-review прошёл: последний report из `tasks/$ARGUMENTS/stages/04-code/02-review/` или `04-code/03-fix/` со статусом `done`.
 
 Прочитай `PROJECT.md` — команда для запуска тестов.
 
@@ -25,7 +25,7 @@ _Исполнитель: агент **Азирафаль** (`Азирафаль`
 
 ## Отчёт
 
-Запиши `tasks/$ARGUMENTS/processes/04-code/04-testing/report-NNN.md`:
+Запиши `tasks/$ARGUMENTS/stages/04-code/04-testing/report-NNN.md`:
 
 ```markdown
 ---
@@ -55,4 +55,4 @@ checklist: все пункты закрыты | открытые: {{список
 {{вывод тест-раннера или ключевые строки}}
 ```
 
-Обнови `tasks/$ARGUMENTS/processes/04-code/04-testing/README.md`: добавь `updated: {{datetime}}`.
+Обнови `tasks/$ARGUMENTS/stages/04-code/04-testing/README.md`: добавь `updated: {{datetime}}`.

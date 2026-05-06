@@ -6,14 +6,14 @@ _Исполнитель: агент **Ада Лавлейс** (`Ада Лавл�
 
 ## Инициализация
 
-Скопируй `README.md` из `docs/standards/v2/04-code/03-fix/README.md` в `tasks/$ARGUMENTS/processes/04-code/03-fix/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/04-code/03-fix/README.md`.
+Скопируй `README.md` из `docs/standards/v2/04-code/03-fix/README.md` в `tasks/$ARGUMENTS/stages/04-code/03-fix/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/04-code/03-fix/README.md`.
 
 ## Исполнение
 
 Прочитай `docs/standards/v2/04-code/03-fix/base-plan.md` и `base-checklist.md`.
 
 Входящие артефакты:
-- Последний `tasks/$ARGUMENTS/processes/04-code/02-review/report-*.md` — замечания
+- Последний `tasks/$ARGUMENTS/stages/04-code/02-review/report-*.md` — замечания
 - Код реализации
 
 Покажи план фикса пользователю. Жди подтверждения.
@@ -24,7 +24,7 @@ _Исполнитель: агент **Ада Лавлейс** (`Ада Лавл�
 
 ## Отчёт
 
-Запиши `tasks/$ARGUMENTS/processes/04-code/03-fix/report-NNN.md`:
+Запиши `tasks/$ARGUMENTS/stages/04-code/03-fix/report-NNN.md`:
 
 ```markdown
 ---
@@ -56,4 +56,4 @@ checklist: все пункты закрыты | открытые: {{список
 Прошло: N | Упало: N
 ```
 
-Обнови `tasks/$ARGUMENTS/processes/04-code/03-fix/README.md`: добавь `updated: {{datetime}}`.
+Обнови `tasks/$ARGUMENTS/stages/04-code/03-fix/README.md`: добавь `updated: {{datetime}}`.

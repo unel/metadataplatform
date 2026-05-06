@@ -8,9 +8,9 @@ _Исполнитель: агент **Бо** (`Бо`)._
 
 ## Шаг 1. Инициализация
 
-Создай директорию `tasks/$ARGUMENTS/processes/00-research/02-web/` если не существует.
+Создай директорию `tasks/$ARGUMENTS/stages/00-research/02-web/` если не существует.
 
-Скопируй `README.md` из `docs/standards/v2/00-research/02-web/README.md` в `tasks/$ARGUMENTS/processes/00-research/02-web/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/00-research/02-web/README.md`.
+Скопируй `README.md` из `docs/standards/v2/00-research/02-web/README.md` в `tasks/$ARGUMENTS/stages/00-research/02-web/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/00-research/02-web/README.md`.
 
 Запиши в `status-log.md`:
 ```
@@ -29,10 +29,10 @@ updated: {{datetime}}
 
 Прочитай:
 - `docs/standards/v2/00-research/02-web/base-plan.md`
-- последний `tasks/$ARGUMENTS/processes/00-research/01-interview/report-*.md`
+- последний `tasks/$ARGUMENTS/stages/00-research/01-interview/report-*.md`
 - `tasks/$ARGUMENTS/TASK.md` и `PROJECT.md`
 
-Сгенерируй `tasks/$ARGUMENTS/processes/00-research/02-web/plan.md`:
+Сгенерируй `tasks/$ARGUMENTS/stages/00-research/02-web/plan.md`:
 ```markdown
 ---
 purpose: План процесса web-research — исполнитель читает перед стартом
@@ -54,7 +54,7 @@ base-plan: 00-research-web v{{version}}
 - расширения из `docs/standards/v2/extensions/` по контексту
 - сгенерированный `plan.md`
 
-Запиши `tasks/$ARGUMENTS/processes/00-research/02-web/checklist.md`:
+Запиши `tasks/$ARGUMENTS/stages/00-research/02-web/checklist.md`:
 ```markdown
 ---
 purpose: Чек-лист прогона web-research — исполнитель отмечает по ходу выполнения

@@ -52,12 +52,12 @@ updated: 2026-04-26T18:00
    ```
    - [ ] **BL-NNN** — <название> → [<feature-code>/<action-filename>](path/to/action.md)
    ```
-3. Создай action-файл в `tasks/<feature>/processes/06-retro/actions/` если ещё не существует
+3. Создай action-файл в `tasks/<feature>/artifacts/actions/` если ещё не существует
 4. Обнови поле `updated` в frontmatter BACKLOG.md
 
 ## 6. Формирование отчёта
 
-Запиши `tasks/<feature>/processes/06-retro/04-solve/report-NNN.md`:
+Запиши `tasks/<feature>/stages/06-retro/04-solve/report-NNN.md`:
 
 ```markdown
 ---

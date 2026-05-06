@@ -6,7 +6,7 @@ _Режим: **Харли Куин**. Выполняется операторо�
 
 ## Инициализация
 
-Скопируй `README.md` из `docs/standards/v2/06-retro/01-recall/README.md` в `tasks/$ARGUMENTS/processes/06-retro/01-recall/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/06-retro/01-recall/README.md`.
+Скопируй `README.md` из `docs/standards/v2/06-retro/01-recall/README.md` в `tasks/$ARGUMENTS/stages/06-retro/01-recall/README.md` и добавь в метаданные: `feature: $ARGUMENTS`, `generated: {{datetime}}`, `source: docs/standards/v2/06-retro/01-recall/README.md`.
 
 ## Исполнение
 
@@ -25,7 +25,7 @@ _Режим: **Харли Куин**. Выполняется операторо�
 
 ## Отчёт
 
-Запиши `tasks/$ARGUMENTS/processes/06-retro/01-recall/report-NNN.md`:
+Запиши `tasks/$ARGUMENTS/stages/06-retro/01-recall/report-NNN.md`:
 
 ```markdown
 ---
