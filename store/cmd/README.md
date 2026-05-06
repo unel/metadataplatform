@@ -5,8 +5,9 @@ Unix-socket сервер для приёма и обработки JSONL-соо�
 ## Сборка
 
 ```sh
-mkdir -p store/dist
-go build -o store/dist/store ./store/cmd/
+# из директории store/
+mkdir -p dist
+go build -o dist/store ./cmd/
 ```
 
 Бинарь складывается в `store/dist/store`.

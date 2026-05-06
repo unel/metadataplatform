@@ -1,4 +1,4 @@
-module github.com/unel/metadataplatform
+module github.com/unel/metadataplatform/store
 
 go 1.22
 
