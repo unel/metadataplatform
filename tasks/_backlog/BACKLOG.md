@@ -1,6 +1,6 @@
 ---
 created: 2026-05-06T04:38:54Z
-updated: 2026-05-06T14:58:30Z
+updated: 2026-05-11T20:11:02Z
 ---
 
 # Global Backlog
@@ -23,7 +23,7 @@ ID стабилен — не меняется при переносах межд
 - [ ] **BL-007** — Gate-блокировка pipeline: вышестоящие шаги не в pending → [crud/07-pipeline-gate](../0002-store-crud/artifacts/actions/07-pipeline-gate.md)
 - [ ] **BL-008** — Gate перед 06-retro: все предыдущие шаги done или явное решение → [crud/08-retro-gate](../0002-store-crud/artifacts/actions/08-retro-gate.md)
 - [ ] **BL-009** — Fix-report обязателен перед переводом в done после failed → [crud/09-fix-report-mandatory](../0002-store-crud/artifacts/actions/09-fix-report-mandatory.md)
-- [ ] **BL-010** — scripts/feature-status.sh: компактный статус всех шагов → [crud/10-feature-status-script](../0002-store-crud/artifacts/actions/10-feature-status-script.md)
+- [x] **BL-010** — scripts/feature-status.sh: компактный статус всех шагов → [crud/10-feature-status-script](../0002-store-crud/artifacts/actions/10-feature-status-script.md) *(закрыто 2026-05-11)*
 - [ ] **BL-011** — scripts/log-note.sh и log-complaint.sh: снизить барьер к ведению notes → [crud/11-log-note-script](../0002-store-crud/artifacts/actions/11-log-note-script.md)
 - [ ] **BL-012** — Стандарт start/end в status-log: in-progress при старте, done при завершении → [crud/12-status-log-timestamps](../0002-store-crud/artifacts/actions/12-status-log-timestamps.md)
 - [ ] **BL-013** — Раздел "Голос" в AGENT.md каждого агента → [crud/13-agent-voice](../0002-store-crud/artifacts/actions/13-agent-voice.md)
@@ -66,6 +66,7 @@ ID стабилен — не меняется при переносах межд
 | ID | Название | Закрыто | Причина |
 |---|---|---|---|
 | BL-005 | Backlog механизм | 2026-05-06 | реализовано |
+| BL-010 | scripts/feature-status.py | 2026-05-11 | `scripts/feature-status.py` |
 | BL-027 | Стандарт структуры tasks/<feature>/ | 2026-05-06 | `docs/standards/v2/project-structure.md` |
 | BL-038 | Мигрировать репозиторий на целевую структуру проекта | 2026-05-06 | выполнено |
 | BL-039 | Каталог этапов и шагов stages.md | 2026-05-06 | `docs/standards/v2/stages.md` |
