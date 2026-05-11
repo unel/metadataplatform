@@ -1,9 +1,6 @@
 ---
 purpose: Описание процесса Acceptance: Write — точка входа для исполнителя и оркестратора
 executor: Танк
-next-on-success: 02-acceptance/02-review
-next-on-failure: —
-rollback-to: 01-spec/03-fix
 ---
 
 # Acceptance: Write
@@ -22,14 +19,6 @@ rollback-to: 01-spec/03-fix
 ## Исходящие артефакты
 
 - `report-NNN.md` — полный текст acceptance сценариев
-
-## Навигация
-
-| Исход | Следующий шаг |
-|---|---|
-| Успех | `02-acceptance/02-review` |
-| Провал | — (нет отдельного процесса) |
-| Откат / переосмысление | `01-spec/03-fix` — если обнаружен failure mode которого нет в spec |
 
 ## Артефакты процесса
 

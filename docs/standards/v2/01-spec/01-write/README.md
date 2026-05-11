@@ -1,9 +1,6 @@
 ---
 purpose: Описание процесса Spec: Write — точка входа для исполнителя и оркестратора
 executor: Танк
-next-on-success: 01-spec/02-review
-next-on-failure: —
-rollback-to: 00-research/01-interview
 ---
 
 # Spec: Write
@@ -25,14 +22,6 @@ rollback-to: 00-research/01-interview
 ## Исходящие артефакты
 
 - `report-NNN.md` — полный текст spec
-
-## Навигация
-
-| Исход | Следующий шаг |
-|---|---|
-| Успех | `01-spec/02-review` |
-| Провал | — (нет отдельного процесса) |
-| Откат / переосмысление | `00-research/01-interview` — если входных данных недостаточно для написания spec |
 
 ## Артефакты процесса
 

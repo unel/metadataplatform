@@ -1,9 +1,6 @@
 ---
 purpose: Описание процесса фикса кода — точка входа для Ады и оркестратора
 executor: Ада Лавлейс
-next-on-success: 04-code/02-review
-next-on-failure: 04-code/03-fix
-rollback-to: 02-acceptance/03-fix
 ---
 
 # 04-code/03-fix: Фикс кода
@@ -21,13 +18,6 @@ rollback-to: 02-acceptance/03-fix
 
 - Исправленный код
 - `04-code/03-fix/report-NNN.md`
-
-## Навигация
-
-| Условие | Следующий шаг |
-|---|---|
-| Все замечания исправлены | 04-code/02-review |
-| Замечание требует изменения acceptance | `clarification` → 02-acceptance/03-fix |
 
 ## Артефакты процесса
 

@@ -1,9 +1,6 @@
 ---
 purpose: Создание ретро-команды, сбор выжимок от участников — что болело, что предлагают
 executor: Харли Куин (оркестратор)
-next-on-success: 06-retro/03-analyze
-next-on-failure: 06-retro/02-collect
-rollback-to: 06-retro/01-recall
 ---
 
 # 06-retro/02-collect: Сбор выжимок
@@ -22,12 +19,6 @@ rollback-to: 06-retro/01-recall
 
 - Retro-команда (активна — не закрывается до 04-solve)
 - `06-retro/02-collect/report-NNN.md` — выжимки всех участников
-
-## Навигация
-
-| Условие | Следующий шаг |
-|---|---|
-| Все тиммейты прислали выжимки | 06-retro/03-analyze |
 
 ## Артефакты процесса
 

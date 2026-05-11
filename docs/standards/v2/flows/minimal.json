@@ -1,0 +1,15 @@
+{
+  "name": "minimal",
+  "description": "Урезанный флоу: только spec → acceptance → code. Без research и retro.",
+  "steps": [
+    { "step": "01-spec/01-write",        "next-success": "01-spec/02-review",       "next-fail": "",                   "previous": ""                    },
+    { "step": "01-spec/02-review",       "next-success": "02-acceptance/01-write",  "next-fail": "01-spec/03-fix",     "previous": "01-spec/01-write"    },
+    { "step": "01-spec/03-fix",          "next-success": "01-spec/02-review",       "next-fail": "",                   "previous": "01-spec/02-review"   },
+    { "step": "02-acceptance/01-write",  "next-success": "02-acceptance/02-review", "next-fail": "",                   "previous": "01-spec/02-review"   },
+    { "step": "02-acceptance/02-review", "next-success": "04-code/01-write",        "next-fail": "02-acceptance/03-fix","previous": "02-acceptance/01-write"},
+    { "step": "02-acceptance/03-fix",    "next-success": "02-acceptance/02-review", "next-fail": "",                   "previous": "02-acceptance/02-review"},
+    { "step": "04-code/01-write",        "next-success": "04-code/02-review",       "next-fail": "",                   "previous": "02-acceptance/02-review"},
+    { "step": "04-code/02-review",       "next-success": "",                        "next-fail": "04-code/03-fix",     "previous": "04-code/01-write"    },
+    { "step": "04-code/03-fix",          "next-success": "04-code/02-review",       "next-fail": "",                   "previous": "04-code/02-review"   }
+  ]
+}

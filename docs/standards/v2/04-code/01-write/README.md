@@ -1,9 +1,6 @@
 ---
 purpose: Описание процесса написания кода — точка входа для Ады и оркестратора
 executor: Ада Лавлейс
-next-on-success: 04-code/02-review
-next-on-failure: 04-code/03-fix
-rollback-to: 03-tests/03-fix
 ---
 
 # 04-code/01-write: Написание кода
@@ -22,14 +19,6 @@ rollback-to: 03-tests/03-fix
 
 - Код реализации в соответствующей директории проекта
 - `04-code/01-write/report-NNN.md`
-
-## Навигация
-
-| Условие | Следующий шаг |
-|---|---|
-| Код написан, тесты зелёные | 04-code/02-review |
-| Тесты требуют корректировки | `clarification` → 03-tests/03-fix |
-| Acceptance неполный или противоречивый | `clarification` → 02-acceptance/03-fix |
 
 ## Артефакты процесса
 

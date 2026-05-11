@@ -1,0 +1,30 @@
+{
+  "name": "default",
+  "description": "Стандартный workflow v2 — полный пайплайн фичи",
+  "steps": [
+    { "step": "00-research/01-interview",  "next-success": "00-research/02-web",       "next-fail": "",                        "previous": ""                        },
+    { "step": "00-research/02-web",        "next-success": "01-spec/01-write",          "next-fail": "",                        "previous": "00-research/01-interview" },
+    { "step": "01-spec/01-write",          "next-success": "01-spec/02-review",         "next-fail": "",                        "previous": "00-research/02-web"       },
+    { "step": "01-spec/02-review",         "next-success": "02-acceptance/01-write",    "next-fail": "01-spec/03-fix",          "previous": "01-spec/01-write"         },
+    { "step": "01-spec/03-fix",            "next-success": "01-spec/02-review",         "next-fail": "",                        "previous": "01-spec/02-review"        },
+    { "step": "02-acceptance/01-write",    "next-success": "02-acceptance/02-review",   "next-fail": "",                        "previous": "01-spec/02-review"        },
+    { "step": "02-acceptance/02-review",   "next-success": "03-tests/01-write",         "next-fail": "02-acceptance/03-fix",    "previous": "02-acceptance/01-write"   },
+    { "step": "02-acceptance/03-fix",      "next-success": "02-acceptance/02-review",   "next-fail": "",                        "previous": "02-acceptance/02-review"  },
+    { "step": "03-tests/01-write",         "next-success": "03-tests/02-review",        "next-fail": "",                        "previous": "02-acceptance/02-review"  },
+    { "step": "03-tests/02-review",        "next-success": "03-tests/04-run",           "next-fail": "03-tests/03-fix",         "previous": "03-tests/01-write"        },
+    { "step": "03-tests/03-fix",           "next-success": "03-tests/02-review",        "next-fail": "",                        "previous": "03-tests/02-review"       },
+    { "step": "03-tests/04-run",           "next-success": "04-code/01-write",          "next-fail": "",                        "previous": "03-tests/02-review"       },
+    { "step": "04-code/01-write",          "next-success": "04-code/02-review",         "next-fail": "",                        "previous": "03-tests/04-run"          },
+    { "step": "04-code/02-review",         "next-success": "04-code/04-testing",        "next-fail": "04-code/03-fix",          "previous": "04-code/01-write"         },
+    { "step": "04-code/03-fix",            "next-success": "04-code/02-review",         "next-fail": "",                        "previous": "04-code/02-review"        },
+    { "step": "04-code/04-testing",        "next-success": "05-docs/01-write",          "next-fail": "",                        "previous": "04-code/02-review"        },
+    { "step": "05-docs/01-write",          "next-success": "05-docs/02-review",         "next-fail": "",                        "previous": "04-code/04-testing"       },
+    { "step": "05-docs/02-review",         "next-success": "",                          "next-fail": "05-docs/03-fix",          "previous": "05-docs/01-write"         },
+    { "step": "05-docs/03-fix",            "next-success": "05-docs/02-review",         "next-fail": "",                        "previous": "05-docs/02-review"        },
+    { "step": "06-retro/01-recall",        "next-success": "",                          "next-fail": "",                        "previous": ""                         },
+    { "step": "06-retro/02-collect",       "next-success": "",                          "next-fail": "",                        "previous": "06-retro/01-recall"       },
+    { "step": "06-retro/03-analyze",       "next-success": "",                          "next-fail": "",                        "previous": "06-retro/02-collect"      },
+    { "step": "06-retro/04-solve",         "next-success": "",                          "next-fail": "",                        "previous": "06-retro/03-analyze"      },
+    { "step": "06-retro/05-write",         "next-success": "",                          "next-fail": "",                        "previous": "06-retro/04-solve"        }
+  ]
+}
