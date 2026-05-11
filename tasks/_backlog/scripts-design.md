@@ -201,6 +201,45 @@ scripts/feature-status.py --json
 | inconsistent | `%` |
 | неизвестный | `*` |
 
+### Тестовые сценарии (проверено 2026-05-11)
+
+```bash
+# Verbose по имени фичи
+scripts/feature-status.py --feature 0002-store-crud
+# → все шаги done; 02-acceptance/02-review показывает * pass (нестандартный статус — корректно)
+
+# Short — одна строка
+scripts/feature-status.py --feature 0002-store-crud --short
+# → "0002-store-crud  ✓  (all done)"
+
+# Все фичи коротко (включая старые без stages/ → error-строки)
+scripts/feature-status.py --all --short
+
+# JSON для одной фичи
+scripts/feature-status.py --feature 0002-store-crud --json
+# → {"feature": "0002-store-crud", "active_step": null, "steps": [...]}
+
+# JSON массив (--all); фичи без stages/ → {"feature": "...", "error": "no stages/ directory"}
+scripts/feature-status.py --all --json
+
+# CWD-резолюция изнутри папки шага
+cd tasks/0002-store-crud/stages/04-code/03-fix && scripts/feature-status.py --short
+# → резолюция работает, возвращает статус 0002-store-crud
+
+# --unique с неоднозначным паттерном → exit 1 с именами совпадений
+scripts/feature-status.py --feature store --unique
+# → exit 1: "matched 3 tasks (max 1): 0001-store-connection, 0002-store-crud, store"
+
+# Без параметров из корня репо → usage + exit 0
+scripts/feature-status.py
+```
+
+### Design-решения принятые при реализации
+
+**Толерантность к старому формату без `run=N`**: если в `status-log.md` нет ни одной строки `run=N`, inconsistent-проверки на brief/report-N пропускаются. Задачи написанные до введения системы run=N отображаются корректно без false-positive `inconsistent`.
+
+**Фичи без `stages/`** (старый формат v1): в verbose/short выводятся как `error — no stages/ directory`; в JSON — `{"feature": "...", "error": "..."}`.
+
 ---
 
 ## begin-step.py
