@@ -8,6 +8,19 @@ from pathlib import Path
 FILE_PREFIX = 'notes'
 
 
+def get_datetime() -> str:
+    return subprocess.run(
+        ['date', '-u', '+%Y-%m-%dT%H:%M:%SZ'], capture_output=True, text=True,
+    ).stdout.strip()
+
+
+def next_entry_number(target: Path) -> int:
+    if not target.exists():
+        return 1
+    content = target.read_text(encoding='utf-8')
+    return content.count('\n## ') + (1 if content.startswith('## ') else 0) + 1
+
+
 def find_repo_root(start: Path) -> Path | None:
     p = start
     while p != p.parent:
@@ -39,10 +52,9 @@ def find_step_from_cwd(cwd: Path, tasks_dir: Path) -> Path | None:
             rel = p.relative_to(tasks_dir)
             parts = rel.parts
             # tasks/<feat>/stages/<stage>/<step>/...
-            if len(parts) >= 4 and parts[2] == 'stages':
-                feat_dir = tasks_dir / parts[0]
-                step_dir = feat_dir / 'stages' / parts[3] / parts[4] if len(parts) >= 5 else None
-                if step_dir and step_dir.is_dir():
+            if len(parts) >= 4 and parts[1] == 'stages':
+                step_dir = tasks_dir / parts[0] / 'stages' / parts[2] / parts[3]
+                if step_dir.is_dir():
                     return step_dir
         except ValueError:
             pass
@@ -111,11 +123,23 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description=f'Append a line to {FILE_PREFIX}-<agent>.md for the current step.',
     )
-    parser.add_argument('--agent', required=True, metavar='AGENT')
-    parser.add_argument('--message', required=True, metavar='TEXT')
+    agent_group = parser.add_mutually_exclusive_group()
+    agent_group.add_argument('--agent', metavar='AGENT')
+    agent_group.add_argument('--user', action='store_true', help='shorthand for --agent user')
+    parser.add_argument('--message', metavar='TEXT')
     parser.add_argument('--step', metavar='STAGE/STEP')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
+
+    if not args.agent and not args.user:
+        parser.print_help()
+        sys.exit(0)
+    if not args.message:
+        parser.print_help()
+        sys.exit(0)
+
+    if args.user:
+        args.agent = 'user'
 
     repo_root = find_repo_root(Path.cwd())
     if repo_root is None:
@@ -125,12 +149,17 @@ def main() -> None:
     step_dir = resolve_step_dir(args, repo_root)
     target = step_dir / f'{FILE_PREFIX}-{args.agent}.md'
 
+    n = next_entry_number(target)
+    ts = get_datetime()
+
     if args.dry_run:
-        print(f"dry-run: would append to {target}:\n  {args.message}")
+        print(f"dry-run: would append to {target}:")
+        print(f"  ## {n} — {ts}")
+        print(f"  {args.message}")
         return
 
     with target.open('a', encoding='utf-8') as f:
-        f.write(args.message + '\n')
+        f.write(f"## {n} — {ts}\n{args.message}\n\n")
 
     print(f"→ {target.relative_to(repo_root)}")
 
