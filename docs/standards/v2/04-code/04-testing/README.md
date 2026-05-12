@@ -1,9 +1,6 @@
 ---
 purpose: Описание финального прогона тестов после code-review — точка входа для исполнителя и оркестратора
 executor: Азирафаль
-next-on-success: 05-docs/01-write
-next-on-failure: 04-code/03-fix
-rollback-to: 03-tests/03-fix
 ---
 
 # 04-code/04-testing: Финальный прогон тестов (Green)
@@ -21,15 +18,6 @@ rollback-to: 03-tests/03-fix
 ## Исходящие артефакты
 
 - `04-code/04-testing/report-NNN.md` — результаты прогона
-
-## Навигация
-
-| Условие | Следующий шаг |
-|---|---|
-| Все тесты зелёные | 05-docs/01-write |
-| Тест падает из-за ошибки в коде | 04-code/03-fix |
-| Тест падает из-за ошибки в тесте | 03-tests/03-fix |
-| Тест падает из-за проблемы в acceptance | `clarification` → 02-acceptance/03-fix |
 
 ## Артефакты процесса
 

@@ -1,9 +1,6 @@
 ---
 purpose: Выработка решений по проблемам, верификация с командой, закрытие retro-команды
 executor: Харли Куин (оркестратор)
-next-on-success: 06-retro/05-write
-next-on-failure: 06-retro/04-solve
-rollback-to: 06-retro/03-analyze
 ---
 
 # 06-retro/04-solve: Решения
@@ -21,12 +18,6 @@ rollback-to: 06-retro/03-analyze
 
 - `06-retro/04-solve/report-NNN.md` — таблица решений, actionable backlog
 - Retro-команда закрыта
-
-## Навигация
-
-| Условие | Следующий шаг |
-|---|---|
-| Решения финализированы, команда закрыта | 06-retro/05-write |
 
 ## Артефакты процесса
 

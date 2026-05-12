@@ -1,9 +1,6 @@
 ---
 purpose: Запись финального RETRO.md по итогам обсуждения
 executor: Харли Куин (оркестратор)
-next-on-success: ~
-next-on-failure: 06-retro/05-write
-rollback-to: 06-retro/04-solve
 ---
 
 # 06-retro/05-write: Запись RETRO.md
@@ -20,12 +17,6 @@ rollback-to: 06-retro/04-solve
 
 - `RETRO.md` в директории фичи
 - `06-retro/05-write/report-NNN.md`
-
-## Навигация
-
-| Условие | Следующий шаг |
-|---|---|
-| RETRO.md написан | Фича завершена ✓ |
 
 ## Артефакты процесса
 

@@ -1,9 +1,6 @@
 ---
 purpose: Описание процесса recall — агенты вспоминают и записывают наблюдения по фиче
 executor: Харли Куин (оркестратор)
-next-on-success: 06-retro/02-discuss
-next-on-failure: 06-retro/01-recall
-rollback-to: ~
 ---
 
 # 06-retro/01-recall: Recall
@@ -22,12 +19,6 @@ rollback-to: ~
 
 - Обновлённые `notes-<агент>.md` и `complaints-<агент>.md` для каждого участника
 - `06-retro/01-recall/report-NNN.md`
-
-## Навигация
-
-| Условие | Следующий шаг |
-|---|---|
-| Все агенты завершили recall | 06-retro/02-discuss |
 
 ## Артефакты процесса
 
