@@ -31,7 +31,13 @@ updated: 2026-04-26T12:00
 
 ## 5. Формирование отчёта
 
-Запиши отчёт содержащий:
+В frontmatter `report-NNN.md` обязательно укажи:
+
+```yaml
+in-response-to: tasks/<feature>/stages/01-spec/02-review/report-NNN.md
+```
+
+Содержимое отчёта:
 - Полный обновлённый текст spec
 - Changelog: по каждому CR — что изменено, или почему не изменено (с обоснованием)
 
@@ -40,6 +46,25 @@ updated: 2026-04-26T12:00
 После фикса:
 - `01-spec/02-review` → pending (нужно перепроверить исправленную spec)
 - Все последующие процессы (`02-acceptance`, `03-tests`, `04-code`, `05-docs`) → stale
+
+## Скрипты
+
+```bash
+# Начало: написать brief-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> in-progress --comment "..."
+# Конец: написать report-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> done --comment "..."
+```
+
+## Финальный шаг: notes/complaints
+
+```bash
+python3 scripts/log-note.py --agent <агент> --message "[propose] текст"
+python3 scripts/log-complaint.py --agent <агент> --message "текст"
+```
+
+Теги: `[doc]`, `[propose]`, `[friction]`, `[miss]`, `[rework]`, `[whatever]`
+Минимум — одна строка.
 
 ## Движение вперёд и назад
 

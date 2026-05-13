@@ -108,6 +108,26 @@ see-also: docs/standards/v2/04-code/sources.md
 - Нет critical/warning → "Код чистый. Готово к финальному прогону тестов."
 - Есть замечания → список с классификацией, файл:строка, объяснение
 
+## Скрипты
+
+```bash
+# Начало: написать brief-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> in-progress --comment "..."
+# Конец: написать report-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> done --comment "..."
+# или failed если есть critical/warning замечания
+```
+
+## Финальный шаг: notes/complaints
+
+```bash
+python3 scripts/log-note.py --agent гримм --message "[propose] текст"
+python3 scripts/log-complaint.py --agent гримм --message "текст"
+```
+
+Теги: `[doc]`, `[propose]`, `[friction]`, `[miss]`, `[rework]`, `[whatever]`
+Минимум — одна строка.
+
 ## Движение вперёд и назад
 
 **Done когда:** нет замечаний critical и warning

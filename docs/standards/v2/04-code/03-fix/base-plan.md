@@ -54,16 +54,36 @@ updated: 2026-04-27T00:00
 - сделай grep по файлу/пакету
 - убедись что других экземпляров нет
 
-## 7. Fix-report
+## 7. Формирование отчёта
 
-После завершения фикса — напиши `fix-report` по шаблону `docs/standards/templates/fix-report.md`.
+В frontmatter `report-NNN.md` обязательно укажи:
 
-Статус не может быть `done` без fix-report если ревью было `failed`.
+```yaml
+in-response-to: tasks/<feature>/stages/04-code/02-review/report-NNN.md
+```
 
-## 8. Формирование отчёта
-
+Содержимое отчёта:
 - Список исправленных замечаний (ссылка → что сделано)
 - Список неисправленных с объяснением
+
+## Скрипты
+
+```bash
+# Начало: написать brief-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> in-progress --comment "..."
+# Конец: написать report-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> done --comment "..."
+```
+
+## Финальный шаг: notes/complaints
+
+```bash
+python3 scripts/log-note.py --agent <агент> --message "[propose] текст"
+python3 scripts/log-complaint.py --agent <агент> --message "текст"
+```
+
+Теги: `[doc]`, `[propose]`, `[friction]`, `[miss]`, `[rework]`, `[whatever]`
+Минимум — одна строка.
 
 ## Движение вперёд и назад
 

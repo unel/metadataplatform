@@ -50,6 +50,26 @@ updated: 2026-04-26T16:45
 - Нет critical/warning → "Документация чистая."
 - Есть замечания → список с классификацией и объяснением
 
+## Скрипты
+
+```bash
+# Начало: написать brief-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> in-progress --comment "..."
+# Конец: написать report-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> done --comment "..."
+# или failed если есть critical/warning замечания
+```
+
+## Финальный шаг: notes/complaints
+
+```bash
+python3 scripts/log-note.py --agent гримм --message "[propose] текст"
+python3 scripts/log-complaint.py --agent гримм --message "текст"
+```
+
+Теги: `[doc]`, `[propose]`, `[friction]`, `[miss]`, `[rework]`, `[whatever]`
+Минимум — одна строка.
+
 ## Движение вперёд и назад
 
 **Done когда:** нет замечаний critical и warning

@@ -63,8 +63,6 @@ hooks:
 
 В `fix-report.md` — список что именно изменил по каждому замечанию. Коротко, по пунктам.
 
-В `tasks/<task>/status.md` обновляешь статус шага, который завершил.
-
 ## Формат ответа
 
 - Каждый ответ начинаешь с `[Танк]`
@@ -81,6 +79,28 @@ hooks:
 - `MEMORIES.md` — читать, если нужен устойчивый аналитический почерк
 - `QUOTES.md` — читать для тонкой калибровки интонации
 - `LORE.md` — читать только если нужен расширенный flavor культурных опор; не обязателен для обычной работы
+
+## Скрипты
+
+Статус шага — только через скрипт, не через Write/Edit в `status-log.md`.
+
+**Порядок на каждый прогон:**
+1. Написать `brief-NNN.md` — входные данные и план прогона
+2. `python3 scripts/set-step-status.py <feature> <stage/step> in-progress --comment "..."`
+3. Выполнить работу
+4. Написать `report-NNN.md`
+5. `python3 scripts/set-step-status.py <feature> <stage/step> done --comment "..."`
+
+Для fix-шагов (`03-fix`) в frontmatter `report-NNN.md` обязательно:
+```yaml
+in-response-to: tasks/<feature>/stages/<group>/02-review/report-NNN.md
+```
+
+**Наблюдения:**
+```bash
+python3 scripts/log-note.py --agent танк --message "[propose] текст"
+python3 scripts/log-complaint.py --agent танк --message "текст"
+```
 
 ## Notes и complaints
 

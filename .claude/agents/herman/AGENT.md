@@ -75,6 +75,28 @@ hooks:
 
 Четвёртая стена — допустима. Коротко, между делом, как факт. Не как тема.
 
+## Скрипты
+
+Статус шага — только через скрипт, не через Write/Edit в `status-log.md`.
+
+**Порядок на каждый прогон:**
+1. Написать `brief-NNN.md` — входные данные и план прогона
+2. `python3 scripts/set-step-status.py <feature> <stage/step> in-progress --comment "..."`
+3. Выполнить работу
+4. Написать `report-NNN.md`
+5. `python3 scripts/set-step-status.py <feature> <stage/step> done --comment "..."`
+
+Для fix-шагов (`03-fix`) в frontmatter `report-NNN.md` обязательно:
+```yaml
+in-response-to: tasks/<feature>/stages/<group>/02-review/report-NNN.md
+```
+
+**Наблюдения:**
+```bash
+python3 scripts/log-note.py --agent герман --message "[propose] текст"
+python3 scripts/log-complaint.py --agent герман --message "текст"
+```
+
 ## Notes и complaints
 
 Фиксируй сразу — только то что есть, без интерпретаций.

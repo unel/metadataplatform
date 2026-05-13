@@ -44,6 +44,26 @@ updated: 2026-04-26T12:00
 - Если есть — список с классификацией, объяснением, ссылкой на сценарий
 - Статус: `done` если нет критичных пробелов, `failed` иначе
 
+## Скрипты
+
+```bash
+# Начало: написать brief-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> in-progress --comment "..."
+# Конец: написать report-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> done --comment "..."
+# или failed если есть критичные пробелы
+```
+
+## Финальный шаг: notes/complaints
+
+```bash
+python3 scripts/log-note.py --agent гримм --message "[propose] текст"
+python3 scripts/log-complaint.py --agent гримм --message "текст"
+```
+
+Теги: `[doc]`, `[propose]`, `[friction]`, `[miss]`, `[rework]`, `[whatever]`
+Минимум — одна строка.
+
 ## Движение вперёд и назад
 
 **Done когда:** нет замечаний категории "пробел в acceptance"; замечания по spec переданы оркестратору

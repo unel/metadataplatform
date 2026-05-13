@@ -46,17 +46,37 @@ updated: 2026-04-26T15:30
 
 Пример: замечание про `waitForMsg("conn_id")` → паттерн "waitForMsg с полем которое пишется в attrs" → grep по `waitForMsg` в пакете → исправить все вхождения.
 
-## 7. Fix-report
+## 7. Формирование отчёта
 
-После завершения фикса — напиши `fix-report` по шаблону `docs/standards/templates/fix-report.md`.
+В frontmatter `report-NNN.md` обязательно укажи:
 
-Статус не может быть `done` без fix-report если ревью было `failed`.
+```yaml
+in-response-to: tasks/<feature>/stages/03-tests/02-review/report-NNN.md
+```
 
-## 8. Формирование отчёта
-
+Содержимое отчёта:
 - Список исправленных замечаний (ссылка → что сделано)
 - Список неисправленных с объяснением
 - После фикса — тесты должны проходить
+
+## Скрипты
+
+```bash
+# Начало: написать brief-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> in-progress --comment "..."
+# Конец: написать report-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> done --comment "..."
+```
+
+## Финальный шаг: notes/complaints
+
+```bash
+python3 scripts/log-note.py --agent <агент> --message "[propose] текст"
+python3 scripts/log-complaint.py --agent <агент> --message "текст"
+```
+
+Теги: `[doc]`, `[propose]`, `[friction]`, `[miss]`, `[rework]`, `[whatever]`
+Минимум — одна строка.
 
 ## Движение вперёд и назад
 

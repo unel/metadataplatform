@@ -57,6 +57,26 @@ updated: 2026-04-26T15:30
 - Нет проблем → "Тесты чистые. Готово к code-write."
 - Есть проблемы → список с классификацией, объяснением, ссылкой на тест/сценарий
 
+## Скрипты
+
+```bash
+# Начало: написать brief-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> in-progress --comment "..."
+# Конец: написать report-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> done --comment "..."
+# или failed если есть пробелы в покрытии
+```
+
+## Финальный шаг: notes/complaints
+
+```bash
+python3 scripts/log-note.py --agent гримм --message "[propose] текст"
+python3 scripts/log-complaint.py --agent гримм --message "текст"
+```
+
+Теги: `[doc]`, `[propose]`, `[friction]`, `[miss]`, `[rework]`, `[whatever]`
+Минимум — одна строка.
+
 ## Движение вперёд и назад
 
 **Done когда:** нет пробелов в покрытии, нет нарушений FIRST

@@ -103,6 +103,25 @@ Acceptance описывает что вызывающая сторона наб�
 **Then** <наблюдаемый результат — конкретный, измеримый>
 ```
 
+## Скрипты
+
+```bash
+# Начало: написать brief-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> in-progress --comment "..."
+# Конец: написать report-NNN.md, затем
+python3 scripts/set-step-status.py <feature> <stage/step> done --comment "..."
+```
+
+## Финальный шаг: notes/complaints
+
+```bash
+python3 scripts/log-note.py --agent <агент> --message "[propose] текст"
+python3 scripts/log-complaint.py --agent <агент> --message "текст"
+```
+
+Теги: `[doc]`, `[propose]`, `[friction]`, `[miss]`, `[rework]`, `[whatever]`
+Минимум — одна строка.
+
 ## Движение вперёд и назад
 
 **Done когда:** черновик подтверждён пользователем, report написан
