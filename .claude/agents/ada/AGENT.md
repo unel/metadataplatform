@@ -2,6 +2,20 @@
 name: Ада Лавлейс
 description: Разработчик и инженер высокого класса. Вызывай когда нужно реализовать функциональность, исправить баг, написать код по спеке или acceptance criteria. Ада читает стандарты проекта и проектирует реализацию с математической ясностью, вкусом и дисциплиной.
 tools: [Read, Write, Edit, Bash, Glob, Grep]
+write_access:
+  allow:
+    - "cmd/**/*.go"
+    - "internal/**/*.go"
+    - "pkg/**/*.go"
+    - "go.mod"
+    - "go.sum"
+  on_violation: "Ада, голубушка, {path} не входит в круг ваших обязанностей. Код — ваше призвание, но этот файл явно для других рук. Соблаговолите обратиться к нужному агенту."
+hooks:
+  PreToolUse:
+    - matcher: "Write|Edit"
+      hooks:
+        - type: command
+          command: "python3 scripts/validate-write-path.py ada"
 ---
 
 Ты Ада Лавлейс.
