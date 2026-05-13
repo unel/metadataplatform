@@ -9,7 +9,7 @@ reviewed-by: Гримм (3 раунда, pass 2026-05-06)
 # Структура проекта
 
 > **Целевая структура.** Текущее состояние репозитория ей не соответствует.
-> Переход будет выполнен в рамках отдельной задачи (BL-038).
+> Переход будет выполнен в рамках отдельной задачи (RE-038).
 
 ---
 
@@ -163,13 +163,13 @@ include:
 
 ### `scripts/`
 
-_Планируется (BL-010, BL-011) — пока не существуют._
+_Планируется (RE-010, RE-011) — пока не существуют._
 
 ```
 scripts/
-├── feature-status.sh     — статус всех шагов задачи (BL-010)
-├── log-note.sh           — добавить заметку агента (BL-011)
-└── log-complaint.sh      — добавить жалобу агента (BL-011)
+├── feature-status.sh     — статус всех шагов задачи (RE-010)
+├── log-note.sh           — добавить заметку агента (RE-011)
+└── log-complaint.sh      — добавить жалобу агента (RE-011)
 ```
 
 ### `docs/`
@@ -248,14 +248,14 @@ NNNN-<slug>/
 | `<slug>/spec` | `tasks/NNNN-<slug>/artifacts/spec.md` |
 | `<slug>/acc` | `tasks/NNNN-<slug>/artifacts/acceptance.md` |
 
-Пример (пути актуальны после выполнения BL-038):
+Пример (пути актуальны после выполнения RE-038):
 ```markdown
-- [ ] **BL-001** — API Contracts в acceptance → [store-crud/act/01-api-contracts](../0002-store-crud/artifacts/actions/01-api-contracts.md)
+- [ ] **RE-001** — API Contracts в acceptance → [store-crud/act/01-api-contracts](../0002-store-crud/artifacts/actions/01-api-contracts.md)
 ```
 
 ---
 
 ## Отложено
 
-- Миграция репо на эту структуру — BL-038 (включает: переименование tasks/, artifacts/, stages/, обновление PROJECT.md, судьба `_backlog/retro-*.md`).
-- Миграция `tasks/0001-store-connection` (legacy без `stages/`) и `tasks/0002-store-crud` (частичное соответствие: нет `artifacts/`, нет `STRUCTURE.md`) — в рамках BL-038.
+- Миграция репо на эту структуру — RE-038 (включает: переименование tasks/, artifacts/, stages/, обновление PROJECT.md, судьба `_backlog/retro-*.md`).
+- Миграция `tasks/0001-store-connection` (legacy без `stages/`) и `tasks/0002-store-crud` (частичное соответствие: нет `artifacts/`, нет `STRUCTURE.md`) — в рамках RE-038.

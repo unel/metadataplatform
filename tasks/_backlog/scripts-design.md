@@ -1,4 +1,4 @@
-# Scripts Design: BL-010, BL-011
+# Scripts Design: RE-010, RE-011
 
 ## Язык и зависимости
 
@@ -41,7 +41,7 @@ def parse_frontmatter(text: str) -> dict:
 
 ## Frontmatter status-log.md
 
-Frontmatter — **статический**: заполняется один раз при инициализации скелета фичи, никогда не изменяется (см. BL-037).
+Frontmatter — **статический**: заполняется один раз при инициализации скелета фичи, никогда не изменяется (см. RE-037).
 
 ```yaml
 ---
@@ -58,7 +58,7 @@ previous-step: 01-spec/01-write
 
 Последний шаг pipeline (`05-docs/02-review`): `next-success-step` пустой. `06-retro` в граф не входит — у его шагов `next-success-step` тоже пустой, cascade-stale на них не распространяется. Это ожидаемое поведение.
 
-**Инициализация**: `status-log.md` с frontmatter создаётся scaffold-скриптом при инициализации скелета фичи (BL-037 — система флоу). До инициализации скрипты не вызываются.
+**Инициализация**: `status-log.md` с frontmatter создаётся scaffold-скриптом при инициализации скелета фичи (RE-037 — система флоу). До инициализации скрипты не вызываются.
 
 **Ограничение**: `status-log.md` не редактируется вручную — только через скрипты. Ручная правка нарушает инварианты на которых строится логика begin-step/end-step/cascade-stale.
 
@@ -105,7 +105,7 @@ Frontmatter остаётся append-only-safe — обновление не тр
 
 ---
 
-## feature-status.py (BL-010)
+## feature-status.py (RE-010)
 
 ### Вызов
 
@@ -257,7 +257,7 @@ scripts/begin-step.py [--step <stage>/<step>] [--dry-run]
    - Последний статус (последнее вхождение паттерна `# <datetime> — <status>`) = `in-progress run=M` → **recovery**: текущий открытый ран = M
    - Последний статус = `done run=*` → stderr warning: `warning: step is already done, opening new run`; продолжает
    - Иначе: `last_run` = max N по всем записям вида `run=N` (default 0); следующий ран = `last_run + 1`
-3. Проверяет наличие `brief-{run:03d}.md` (run = M для recovery, last_run+1 для нового) — exit 1 если нет. Ответственность за создание brief до вызова begin-step лежит на агенте (см. BL-045)
+3. Проверяет наличие `brief-{run:03d}.md` (run = M для recovery, last_run+1 для нового) — exit 1 если нет. Ответственность за создание brief до вызова begin-step лежит на агенте (см. RE-045)
 4. Recovery-путь: перезаписывает datetime в строке последнего вхождения `# <datetime> — in-progress run=M` (единственное нарушение append-only; реализуется через чтение всего файла, замену строки, запись обратно) + stderr warning: `warning: step already in-progress (run {M}), updating timestamp`; exit 0
 5. Если `--dry-run` — печатает что сделал бы; exit 0
 6. Пишет в status-log (append):
@@ -364,7 +364,7 @@ scripts/cascade-stale.py --message "<причина>"
 
 ---
 
-## log-note.py / log-complaint.py (BL-011)
+## log-note.py / log-complaint.py (RE-011)
 
 ### Вызов
 

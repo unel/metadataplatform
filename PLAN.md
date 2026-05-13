@@ -1,6 +1,6 @@
 # Plan
 
-## В работе
+## Завершено
 
 - `store/connection` — Unix socket сервер, echo + логирование
 
