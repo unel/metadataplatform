@@ -18,7 +18,8 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:github.com)",
       "Bash(git log *)",
-      "Bash(git ls-tree *)"
+      "Bash(git ls-tree *)",
+      "WebFetch(domain:docs.anthropic.com)"
     ]
   },
   "mcpServers": {

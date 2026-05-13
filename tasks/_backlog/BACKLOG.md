@@ -1,6 +1,6 @@
 ---
 created: 2026-05-06T04:38:54Z
-updated: 2026-05-13T07:04:01Z
+updated: 2026-05-13T17:17:50Z
 ---
 
 # Global Backlog
@@ -26,7 +26,7 @@ ID стабилен — не меняется при переносах межд
 - [x] **RE-010** — scripts/feature-status.sh: компактный статус всех шагов → [crud/10-feature-status-script](../0002-store-crud/artifacts/actions/10-feature-status-script.md) *(закрыто 2026-05-11)*
 - [ ] **RE-011** — scripts/log-note.sh и log-complaint.sh: снизить барьер к ведению notes → [crud/11-log-note-script](../0002-store-crud/artifacts/actions/11-log-note-script.md)
 - [ ] **RE-012** — Стандарт start/end в status-log: in-progress при старте, done при завершении → [crud/12-status-log-timestamps](../0002-store-crud/artifacts/actions/12-status-log-timestamps.md)
-- [ ] **RE-013** — Раздел "Голос" в AGENT.md каждого агента → [crud/13-agent-voice](../0002-store-crud/artifacts/actions/13-agent-voice.md)
+- [x] **RE-013** — Раздел "Голос" в AGENT.md каждого агента + убрать over-constraining из SOUL.md → [crud/13-agent-voice](../0002-store-crud/artifacts/actions/13-agent-voice.md) *(закрыто 2026-05-13)*
 - [ ] **RE-014** — Раздел "Error types" в шаблоне spec → [crud/14-error-types-in-spec](../0002-store-crud/artifacts/actions/14-error-types-in-spec.md)
 - [ ] **RE-015** — spec.md на уровне группы: единый источник истины → [crud/15-spec-md-single-source](../0002-store-crud/artifacts/actions/15-spec-md-single-source.md)
 - [ ] **RE-016** — Правило clarification 03-tests/04-code: несовместимость API → clarification → [crud/16-tests-code-boundary](../0002-store-crud/artifacts/actions/16-tests-code-boundary.md)
@@ -36,7 +36,7 @@ ID стабилен — не меняется при переносах межд
 - [ ] **RE-020** — Оркестратор передаёт список файлов ревьюеру → [crud/20-reviewer-file-list](../0002-store-crud/artifacts/actions/20-reviewer-file-list.md)
 - [ ] **RE-021** — Стандарт документирования шага для context-recovery → [crud/21-step-documentation-standard](../0002-store-crud/artifacts/actions/21-step-documentation-standard.md)
 - [ ] **RE-022** — go build ./... отдельным шагом: отличать compile-fail от test-fail → [crud/22-go-build-separate-step](../0002-store-crud/artifacts/actions/22-go-build-separate-step.md)
-- [ ] **RE-023** — RFC: Танк/Бо без Write tools → [crud/23-rfc-write-tools](../0002-store-crud/artifacts/actions/23-rfc-write-tools.md)
+- [x] **RE-023** — RFC: Танк/Бо без Write tools → [crud/23-rfc-write-tools](../0002-store-crud/artifacts/actions/23-rfc-write-tools.md) *(закрыто 2026-05-13)*
 - [ ] **RE-024** — Fail fast как дефолт в AGENT.md и write-скиллах → [crud/24-fail-fast-default](../0002-store-crud/artifacts/actions/24-fail-fast-default.md)
 - [ ] **RE-025** — Стандарт datetime через date -u задокументировать → [crud/25-datetime-standard](../0002-store-crud/artifacts/actions/25-datetime-standard.md)
 - [ ] **RE-026** — Управление контекстом при восстановлении сессии: стратегия сжатия, не только STATUS.md → [crud/26-compact-feature-summary](../0002-store-crud/artifacts/actions/26-compact-feature-summary.md)
@@ -71,3 +71,5 @@ ID стабилен — не меняется при переносах межд
 | RE-027 | Стандарт структуры tasks/<feature>/ | 2026-05-06 | `docs/standards/v2/project-structure.md` |
 | RE-038 | Мигрировать репозиторий на целевую структуру проекта | 2026-05-06 | выполнено |
 | RE-039 | Каталог этапов и шагов stages.md | 2026-05-06 | `docs/standards/v2/stages.md` |
+| RE-013 | Раздел "Голос" в AGENT.md каждого агента | 2026-05-13 | `## Голос` добавлен в 8 AGENT.md; "Signs of drift" разжаты во всех SOUL.md |
+| RE-023 | RFC: Танк/Бо без Write tools | 2026-05-13 | Write+Edit добавлены Бо и Герману; у Танка уже был |
