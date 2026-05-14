@@ -5,6 +5,12 @@ updated: 2026-04-26T17:15
 
 # Базовый чек-лист: 06-retro-recall
 
+## Агрегация notes/complaints
+
+- [ ] `find stages/ -name "notes-*.md" -o -name "complaints-*.md"` выполнен
+- [ ] Все найденные файлы агрегированы в `stages/06-retro/01-recall/` с пометкой источника
+- [ ] Файлы пользователя (`notes-user.md`, `complaints-user.md`) включены если существуют
+
 ## Prime Directive и review предыдущего ретро
 
 - [ ] Prime Directive зафиксирован: критика направлена на систему, не на агента

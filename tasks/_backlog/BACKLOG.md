@@ -17,7 +17,7 @@ ID стабилен — не меняется при переносах межд
 - [ ] **RE-001** — API Contracts в шаблоне acceptance-write → [crud/01-api-contracts-acceptance](../0002-store-crud/artifacts/actions/01-api-contracts-acceptance.md)
 - [ ] **RE-002** — Разделы "Контракт" и "Реализация на Go" в шаблоне spec → [crud/02-spec-contract-vs-impl](../0002-store-crud/artifacts/actions/02-spec-contract-vs-impl.md)
 - [ ] **RE-003** — Пункт "инварианты валидации" в шаблоне acceptance → [crud/03-invariants-in-acceptance](../0002-store-crud/artifacts/actions/03-invariants-in-acceptance.md)
-- [ ] **RE-004** — 01-recall: find по всем notes/complaints в processes/ → [crud/04-recall-aggregation](../0002-store-crud/artifacts/actions/04-recall-aggregation.md)
+- [x] **RE-004** — 01-recall: find по всем notes/complaints в processes/ → [crud/04-recall-aggregation](../0002-store-crud/artifacts/actions/04-recall-aggregation.md) *(закрыто 2026-05-14)*
 - [x] **RE-005** — Backlog механизм: 04-solve пополняет BACKLOG.md, 00-research ревьюит → [crud/05-backlog-mechanism](../0002-store-crud/artifacts/actions/05-backlog-mechanism.md) *(закрыто 2026-05-06)*
 - [x] **RE-006** — Notes/complaints как обязательный финальный шаг в write-скиллах → [crud/06-notes-complaints-mandatory](../0002-store-crud/artifacts/actions/06-notes-complaints-mandatory.md) *(закрыто 2026-05-13)*
 - [x] **RE-007** — Gate-блокировка pipeline: вышестоящие шаги не в pending → [crud/07-pipeline-gate](../0002-store-crud/artifacts/actions/07-pipeline-gate.md) *(закрыто 2026-05-14)*
@@ -84,3 +84,4 @@ ID стабилен — не меняется при переносах межд
 | RE-047 | Karpathy practices в скиллы | 2026-05-13 | все 7 механик в base-plan.md: surgical changes, assumptions, strong criteria, Red run, verify |
 | RE-007 | Gate-блокировка pipeline | 2026-05-14 | `previous-step` в frontmatter + валидация в `set-step-status.py`; задокументировано в CLAUDE.md |
 | RE-008 | Gate перед 06-retro | 2026-05-14 | `gate-done-steps` в flow.json + scaffold + `set-step-status.py`; секция gate в `06-retro/01-recall/base-plan.md` |
+| RE-004 | 01-recall агрегирует notes/complaints | 2026-05-14 | шаг агрегации в `06-retro/01-recall/base-plan.md`; пункт в `base-checklist.md` |
