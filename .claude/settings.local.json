@@ -19,7 +19,8 @@
       "WebFetch(domain:github.com)",
       "Bash(git log *)",
       "Bash(git ls-tree *)",
-      "WebFetch(domain:docs.anthropic.com)"
+      "WebFetch(domain:docs.anthropic.com)",
+      "Bash(./scripts/log-note.py *)"
     ]
   },
   "mcpServers": {

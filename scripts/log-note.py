@@ -7,6 +7,26 @@ from pathlib import Path
 
 FILE_PREFIX = 'notes'
 
+VALID_AGENTS = {'ada', 'harley', 'grimm', 'tank', 'crowley', 'aziraphale', 'bo', 'herman', 'user'}
+LOCALIZED_NAMES = {'ада', 'харли', 'гримм', 'танк', 'кроули', 'азирафаль', 'бо', 'герман'}
+AGENT_NAMES: dict[str, str] = {
+    'ada': 'ада', 'harley': 'харли', 'grimm': 'гримм', 'tank': 'танк',
+    'crowley': 'кроули', 'aziraphale': 'азирафаль', 'bo': 'бо',
+    'herman': 'герман', 'user': 'user',
+}
+
+
+def validate_agent(name: str) -> None:
+    """Validate agent name. Exits on invalid input."""
+    if name in LOCALIZED_NAMES:
+        eng = next(k for k, v in AGENT_NAMES.items() if v == name)
+        print(f"error: use English agent name '{eng}', not '{name}'", file=sys.stderr)
+        sys.exit(1)
+    if name not in VALID_AGENTS:
+        valid = ', '.join(sorted(VALID_AGENTS))
+        print(f"error: unknown agent '{name}'; valid names: {valid}", file=sys.stderr)
+        sys.exit(1)
+
 
 def get_datetime() -> str:
     return subprocess.run(
@@ -140,6 +160,8 @@ def main() -> None:
 
     if args.user:
         args.agent = 'user'
+
+    validate_agent(args.agent)
 
     repo_root = find_repo_root(Path.cwd())
     if repo_root is None:

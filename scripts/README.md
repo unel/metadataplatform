@@ -80,7 +80,7 @@ python3 scripts/feature-status.py --feature store-crud --json
 
 ## scaffold-feature.py
 
-Создаёт директорию `tasks/<slug>/stages/` со всеми шагами по флоу. Записывает frontmatter (`previous-step`, `next-success-step`, `next-fail-step`) в каждый `status-log.md`.
+Создаёт директорию `tasks/<slug>/stages/` со всеми шагами по флоу. Записывает frontmatter (`previous-step`, `next-success-step`, `next-fail-step`, `gate-done-steps` где задано) в каждый `status-log.md`.
 
 ```bash
 python3 scripts/scaffold-feature.py <feature-slug> [--flow <name>] [--dry-run]
@@ -105,16 +105,18 @@ python3 scripts/scaffold-feature.py 0003-store-protocol --dry-run
 python3 scripts/log-note.py --agent <agent> --message "<текст>" [--step <stage/step>]
 ```
 
+**Имена агентов** (только английские): `ada`, `harley`, `grimm`, `tank`, `crowley`, `aziraphale`, `bo`, `herman`. Локализованные имена (`ада`, `харли` и т.д.) вернут ошибку.
+
 **Примеры:**
 ```bash
-python3 scripts/log-note.py --agent ада \
+python3 scripts/log-note.py --agent ada \
   --message "[propose] Вынести валидацию ID в отдельную функцию"
 
 python3 scripts/log-note.py --user \
   --message "[miss] Не описали поведение при пустом ID"
 
 # Явно указать шаг (если не определяется по CWD):
-python3 scripts/log-note.py --agent гримм --step 04-code/02-review \
+python3 scripts/log-note.py --agent grimm --step 04-code/02-review \
   --message "[friction] Список файлов не был передан в промпт"
 ```
 
@@ -130,13 +132,56 @@ python3 scripts/log-note.py --agent гримм --step 04-code/02-review \
 python3 scripts/log-complaint.py --agent <agent> --message "<текст>" [--step <stage/step>]
 ```
 
+**Имена агентов** (только английские): `ada`, `harley`, `grimm`, `tank`, `crowley`, `aziraphale`, `bo`, `herman`. Локализованные имена вернут ошибку.
+
 **Примеры:**
 ```bash
-python3 scripts/log-complaint.py --agent кроули \
+python3 scripts/log-complaint.py --agent crowley \
   --message "Тесты писались к несуществующему API, пришлось угадывать сигнатуры"
 
 python3 scripts/log-complaint.py --user \
   --message "Три итерации ревью на то что можно было поймать в acceptance"
+```
+
+---
+
+## collect-notes.py
+
+Собирает notes/complaints агента по всем шагам фичи — для recall перед ретро. Агент запускает сам с `--agent <своё_имя>`.
+
+```bash
+./scripts/collect-notes.py --feature <slug> --agent <name> [--agent <name>...] [--type notes|complaints] [--include-retro]
+```
+
+**Имена агентов** (только английские): `ada`, `harley`, `grimm`, `tank`, `crowley`, `aziraphale`, `bo`, `herman`, `user`, или `all`. Локализованное имя принимается с предупреждением, неизвестное — с ошибкой.
+
+**Иерархия вывода:**
+
+| Заголовок | Содержимое | Условие |
+|---|---|---|
+| `#` | Имя агента | только при нескольких `--agent` |
+| `##` | Процессные / Итоговые | только при `--include-retro` |
+| `###` | Этап (`01-spec`) | всегда |
+| `####` | Этап/шаг (`01-spec/01-write`) | всегда |
+| `#####` | Notes / Complaints | всегда |
+
+Заголовки из файлов ремапятся под `#####`: единственный верхний заголовок удаляется (заголовок файла), остальные сдвигаются до `######` и глубже.
+
+При `--include-retro` секция `## Процессные` показывается всегда — если файлов нет, выводит glob-паттерн по которому искалось (с обоими вариантами имени: `{harley,харли}`).
+
+**Примеры:**
+```bash
+# Только свои complaints (обычный recall)
+./scripts/collect-notes.py --feature store-crud --agent ada --type complaints
+
+# Notes и complaints двух агентов
+./scripts/collect-notes.py --feature store-crud --agent crowley --agent aziraphale
+
+# Все + сравнение с уже агрегированным в ретро
+./scripts/collect-notes.py --feature store-crud --agent ada --include-retro
+
+# Отладка: весь материал по фиче
+./scripts/collect-notes.py --feature store-crud --agent all
 ```
 
 ---
