@@ -20,8 +20,8 @@ ID стабилен — не меняется при переносах межд
 - [ ] **RE-004** — 01-recall: find по всем notes/complaints в processes/ → [crud/04-recall-aggregation](../0002-store-crud/artifacts/actions/04-recall-aggregation.md)
 - [x] **RE-005** — Backlog механизм: 04-solve пополняет BACKLOG.md, 00-research ревьюит → [crud/05-backlog-mechanism](../0002-store-crud/artifacts/actions/05-backlog-mechanism.md) *(закрыто 2026-05-06)*
 - [x] **RE-006** — Notes/complaints как обязательный финальный шаг в write-скиллах → [crud/06-notes-complaints-mandatory](../0002-store-crud/artifacts/actions/06-notes-complaints-mandatory.md) *(закрыто 2026-05-13)*
-- [ ] **RE-007** — Gate-блокировка pipeline: вышестоящие шаги не в pending → [crud/07-pipeline-gate](../0002-store-crud/artifacts/actions/07-pipeline-gate.md)
-- [ ] **RE-008** — Gate перед 06-retro: все предыдущие шаги done или явное решение → [crud/08-retro-gate](../0002-store-crud/artifacts/actions/08-retro-gate.md)
+- [x] **RE-007** — Gate-блокировка pipeline: вышестоящие шаги не в pending → [crud/07-pipeline-gate](../0002-store-crud/artifacts/actions/07-pipeline-gate.md) *(закрыто 2026-05-14)*
+- [x] **RE-008** — Gate перед 06-retro: все предыдущие шаги done или явное решение → [crud/08-retro-gate](../0002-store-crud/artifacts/actions/08-retro-gate.md) *(закрыто 2026-05-14)*
 - [x] **RE-009** — Fix-report обязателен перед переводом в done после failed → [crud/09-fix-report-mandatory](../0002-store-crud/artifacts/actions/09-fix-report-mandatory.md) *(закрыто 2026-05-13)*
 - [x] **RE-010** — scripts/feature-status.sh: компактный статус всех шагов → [crud/10-feature-status-script](../0002-store-crud/artifacts/actions/10-feature-status-script.md) *(закрыто 2026-05-11)*
 - [x] **RE-011** — scripts/log-note.sh и log-complaint.sh: снизить барьер к ведению notes → [crud/11-log-note-script](../0002-store-crud/artifacts/actions/11-log-note-script.md) *(закрыто 2026-05-13)*
@@ -82,3 +82,5 @@ ID стабилен — не меняется при переносах межд
 | RE-046 | Интеграция скриптов в скиллы и агентов | 2026-05-13 | `## Скрипты` в 8 AGENT.md + 15 base-plan.md; `## Финальный шаг` с командами |
 | RE-035 | Харли + Agent tool для оркестрации | 2026-05-13 | решено через `_Режим: Харли Куин_` в CLAUDE.md — main thread с Agent tool |
 | RE-047 | Karpathy practices в скиллы | 2026-05-13 | все 7 механик в base-plan.md: surgical changes, assumptions, strong criteria, Red run, verify |
+| RE-007 | Gate-блокировка pipeline | 2026-05-14 | `previous-step` в frontmatter + валидация в `set-step-status.py`; задокументировано в CLAUDE.md |
+| RE-008 | Gate перед 06-retro | 2026-05-14 | `gate-done-steps` в flow.json + scaffold + `set-step-status.py`; секция gate в `06-retro/01-recall/base-plan.md` |

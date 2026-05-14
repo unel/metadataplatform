@@ -126,6 +126,29 @@ def validate_in_progress(step_dir: Path, run: int, meta: dict, stages_dir: Path)
             f"  Then re-run this command."
         )
 
+    # Gate: all listed steps must be done before this step can start
+    gate_steps_str = meta.get('gate-done-steps', '').strip()
+    if gate_steps_str:
+        not_done = []
+        for gate_step in (s.strip() for s in gate_steps_str.split(',') if s.strip()):
+            gate_dir = resolve_step_dir(stages_dir, gate_step)
+            if gate_dir is None:
+                errors.append(
+                    f"gate step '{gate_step}' directory not found.\n"
+                    f"  Check that the feature was scaffolded correctly."
+                )
+            else:
+                status = get_step_last_status(gate_dir)
+                if status != 'done':
+                    not_done.append(f"    {gate_step}: {status}")
+        if not_done:
+            errors.append(
+                "the following gate steps are not done:\n"
+                + "\n".join(not_done) + "\n"
+                f"  Action: complete all gate steps before starting this step,\n"
+                f"  or document an explicit skip decision in this step's status-log.md."
+            )
+
     # Predecessor check: first run vs re-run
     if run == 1:
         prev_step = meta.get('previous-step', '').strip()

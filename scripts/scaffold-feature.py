@@ -47,16 +47,17 @@ def get_datetime() -> str:
 
 
 def build_status_log(entry: dict, timestamp: str) -> str:
-    return '\n'.join([
+    lines = [
         '---',
         f'next-success-step: {entry.get("next-success", "")}',
         f'next-fail-step: {entry.get("next-fail", "")}',
         f'previous-step: {entry.get("previous", "")}',
-        '---',
-        '',
-        f'# {timestamp} — pending',
-        '',
-    ])
+    ]
+    gate_steps = entry.get('gate-done-steps', [])
+    if gate_steps:
+        lines.append(f'gate-done-steps: {",".join(gate_steps)}')
+    lines += ['---', '', f'# {timestamp} — pending', '']
+    return '\n'.join(lines)
 
 
 def nav_value(step: str) -> str:

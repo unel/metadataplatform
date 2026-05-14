@@ -21,7 +21,7 @@
     { "step": "05-docs/01-write",          "next-success": "05-docs/02-review",         "next-fail": "",                        "previous": "04-code/04-testing"       },
     { "step": "05-docs/02-review",         "next-success": "",                          "next-fail": "05-docs/03-fix",          "previous": "05-docs/01-write"         },
     { "step": "05-docs/03-fix",            "next-success": "05-docs/02-review",         "next-fail": "",                        "previous": "05-docs/02-review"        },
-    { "step": "06-retro/01-recall",        "next-success": "",                          "next-fail": "",                        "previous": ""                         },
+    { "step": "06-retro/01-recall",        "next-success": "",                          "next-fail": "",                        "previous": "",                        "gate-done-steps": ["00-research/02-web", "01-spec/02-review", "02-acceptance/02-review", "03-tests/04-run", "04-code/04-testing", "05-docs/02-review"] },
     { "step": "06-retro/02-collect",       "next-success": "",                          "next-fail": "",                        "previous": "06-retro/01-recall"       },
     { "step": "06-retro/03-analyze",       "next-success": "",                          "next-fail": "",                        "previous": "06-retro/02-collect"      },
     { "step": "06-retro/04-solve",         "next-success": "",                          "next-fail": "",                        "previous": "06-retro/03-analyze"      },
