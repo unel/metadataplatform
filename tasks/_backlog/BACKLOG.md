@@ -1,6 +1,6 @@
 ---
 created: 2026-05-06T04:38:54Z
-updated: 2026-05-13T21:09:00Z
+updated: 2026-05-14T17:14:39Z
 ---
 
 # Global Backlog
@@ -35,7 +35,7 @@ ID стабилен — не меняется при переносах межд
 - [ ] **RE-019** — docs/standards/go/ явно в промпт ревьюера → [crud/19-go-standards-path](../0002-store-crud/artifacts/actions/19-go-standards-path.md)
 - [ ] **RE-020** — Оркестратор передаёт список файлов ревьюеру → [crud/20-reviewer-file-list](../0002-store-crud/artifacts/actions/20-reviewer-file-list.md)
 - [ ] **RE-021** — Стандарт документирования шага для context-recovery → [crud/21-step-documentation-standard](../0002-store-crud/artifacts/actions/21-step-documentation-standard.md)
-- [ ] **RE-022** — go build ./... отдельным шагом: отличать compile-fail от test-fail → [crud/22-go-build-separate-step](../0002-store-crud/artifacts/actions/22-go-build-separate-step.md)
+- [x] **RE-022** — go build ./... отдельным шагом: отличать compile-fail от test-fail → [crud/22-go-build-separate-step](../0002-store-crud/artifacts/actions/22-go-build-separate-step.md) *(закрыто 2026-05-14)*
 - [x] **RE-023** — RFC: Танк/Бо без Write tools → [crud/23-rfc-write-tools](../0002-store-crud/artifacts/actions/23-rfc-write-tools.md) *(закрыто 2026-05-13)*
 - [ ] **RE-024** — Fail fast как дефолт в AGENT.md и write-скиллах → [crud/24-fail-fast-default](../0002-store-crud/artifacts/actions/24-fail-fast-default.md)
 - [ ] **RE-025** — Стандарт datetime через date -u задокументировать → [crud/25-datetime-standard](../0002-store-crud/artifacts/actions/25-datetime-standard.md)
@@ -82,6 +82,7 @@ ID стабилен — не меняется при переносах межд
 | RE-046 | Интеграция скриптов в скиллы и агентов | 2026-05-13 | `## Скрипты` в 8 AGENT.md + 15 base-plan.md; `## Финальный шаг` с командами |
 | RE-035 | Харли + Agent tool для оркестрации | 2026-05-13 | решено через `_Режим: Харли Куин_` в CLAUDE.md — main thread с Agent tool |
 | RE-047 | Karpathy practices в скиллы | 2026-05-13 | все 7 механик в base-plan.md: surgical changes, assumptions, strong criteria, Red run, verify |
+| RE-022 | go build ./... перед go test | 2026-05-14 | пункт в base-checklist.md: 03-tests/01-write, 03-tests/03-fix, 04-code/01-write, 04-code/03-fix |
 | RE-007 | Gate-блокировка pipeline | 2026-05-14 | `previous-step` в frontmatter + валидация в `set-step-status.py`; задокументировано в CLAUDE.md |
 | RE-008 | Gate перед 06-retro | 2026-05-14 | `gate-done-steps` в flow.json + scaffold + `set-step-status.py`; секция gate в `06-retro/01-recall/base-plan.md` |
 | RE-004 | 01-recall агрегирует notes/complaints | 2026-05-14 | шаг агрегации в `06-retro/01-recall/base-plan.md`; пункт в `base-checklist.md` |
